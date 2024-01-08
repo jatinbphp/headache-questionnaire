@@ -539,6 +539,342 @@
                                     </td>
                                 </tr>
 
+                                {{-- eleventh row --}}
+                                <tr>
+                                    <td>
+                                         <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 1560px;"><td> Question 11: Which of the following symptoms is most prominent during your head ache? Only tick those that is applciable</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="poor_memmory" value="1"> Yes
+                                                        <input type="radio" name="poor_memmory" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 60px;">
+                                                    <td>
+                                                        <input type="radio" name="focal_neuro_signs" value="1"> Yes
+                                                        <input type="radio" name="focal_neuro_signs" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="poor_concentration" value="1"> Yes
+                                                        <input type="radio" name="poor_concentration" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="irritability" value="1"> Yes
+                                                        <input type="radio" name="irritability" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="emotional_lability" value="1"> Yes
+                                                        <input type="radio" name="emotional_lability" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="poor_sight" value="1"> Yes
+                                                        <input type="radio" name="poor_sight" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="squinting" value="1"> Yes
+                                                        <input type="radio" name="squinting" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="insomnia" value="1"> Yes
+                                                        <input type="radio" name="insomnia" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="equilibrium_desturbance" value="1"> Yes
+                                                        <input type="radio" name="equilibrium_desturbance" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="conjunctival_redness" value="1"> Yes
+                                                        <input type="radio" name="conjunctival_redness" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="nausea" value="1"> Yes
+                                                        <input type="radio" name="nausea" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="neck_stiffness" value="1"> Yes
+                                                        <input type="radio" name="neck_stiffness" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="restricted_neck_and_sholder_movements" value="1"> Yes
+                                                        <input type="radio" name="restricted_neck_and_sholder_movements" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="reduced_hearing_hypoacusis" value="1"> Yes
+                                                        <input type="radio" name="reduced_hearing_hypoacusis" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="ringing_in_the_ears_tinnitus" value="1"> Yes
+                                                        <input type="radio" name="ringing_in_the_ears_tinnitus" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="tired_eyes_astenopia" value="1"> Yes
+                                                        <input type="radio" name="tired_eyes_astenopia" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="eyes_sensitive_to_light_photophobia" value="1"> Yes
+                                                        <input type="radio" name="eyes_sensitive_to_light_photophobia" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="loss_of_smell_hyposmia" value="1"> Yes
+                                                        <input type="radio" name="loss_of_smell_hyposmia" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="jaw_claudation" value="1"> Yes
+                                                        <input type="radio" name="jaw_claudation" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="jaw_locking" value="1"> Yes
+                                                        <input type="radio" name="jaw_locking" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="jaw_tenderness" value="1"> Yes
+                                                        <input type="radio" name="jaw_tenderness" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="grinding_of_teeth_bruxism" value="1"> Yes
+                                                        <input type="radio" name="grinding_of_teeth_bruxism" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="focal_dystonia" value="1"> Yes
+                                                        <input type="radio" name="focal_dystonia" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 60px;">
+                                                    <td>
+                                                        <input type="radio" name="poly_myalgia_rheumatica" value="1"> Yes
+                                                        <input type="radio" name="poly_myalgia_rheumatica" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="enlarged_tortuous_and_tender_temporal_artery" value="1"> Yes
+                                                        <input type="radio" name="enlarged_tortuous_and_tender_temporal_artery" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="spesific_sholder_pain" value="1"> Yes
+                                                        <input type="radio" name="spesific_sholder_pain" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="diplopia_double_vision" value="1"> Yes
+                                                        <input type="radio" name="diplopia_double_vision" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="purulent_nasal_secretion" value="1"> Yes
+                                                        <input type="radio" name="purulent_nasal_secretion" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="nasal_obstruction" value="1"> Yes
+                                                        <input type="radio" name="nasal_obstruction" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="fever" value="1"> Yes
+                                                        <input type="radio" name="fever" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="blurred_vision" value="1"> Yes
+                                                        <input type="radio" name="blurred_vision" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="daytime_sleepiness" value="1"> Yes
+                                                        <input type="radio" name="daytime_sleepiness" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="horners_syndrome" value="1"> Yes
+                                                        <input type="radio" name="horners_syndrome" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="papillodema" value="1"> Yes
+                                                        <input type="radio" name="papillodema" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="black_outs" value="1"> Yes
+                                                        <input type="radio" name="black_outs" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="leaky_nose_or_very_runny" value="1"> Yes
+                                                        <input type="radio" name="leaky_nose_or_very_runny" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="vommiting" value="1"> Yes
+                                                        <input type="radio" name="vommiting" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="depressed_consciousness" value="1"> Yes
+                                                        <input type="radio" name="depressed_consciousness" value="0" checked> No  
+                                                    </td>
+                                                </tr> 
+                                            </tbody>
+                                        </table>
+                                    </td>
+
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr class="third_column" style="height: 1560px;"><td class="middle_column"> Associated</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;"><td>Poor Memmory</td></tr>
+                                                <tr style="height: 60px;"><td>Focal Neuro signs. Loss of movement, loss of sensation, hemineglect etc, speech difficulties</td></tr>
+                                                <tr style="height: 40px;"><td>Poor Concentration</td></tr>
+                                                <tr style="height: 40px;"><td>Irritability</td></tr>
+                                                <tr style="height: 40px;"><td>Emotional Lability</td></tr>
+                                                <tr style="height: 40px;"><td>Poor sight</td></tr>
+                                                <tr style="height: 40px;"><td>Squinting</td></tr>
+                                                <tr style="height: 40px;"><td>Insomnia</td></tr>
+                                                <tr style="height: 40px;"><td>Equilibrium desturbance</td></tr>
+                                                <tr style="height: 40px;"><td>Conjunctival Redness</td></tr>
+                                                <tr style="height: 40px;"><td>Nausea</td></tr>
+                                                <tr style="height: 40px;"><td>Neck Stiffness</td></tr>
+                                                <tr style="height: 40px;"><td>restricted neck and sholder movements</td></tr>
+                                                <tr style="height: 40px;"><td>Reduced hearing (hypoacusis)</td></tr>
+                                                <tr style="height: 40px;"><td>Ringing in the ears (Tinnitus)</td></tr>
+                                                <tr style="height: 40px;"><td>Tired eyes (Astenopia)</td></tr>
+                                                <tr style="height: 40px;"><td>Eyes sensitive to light(Photophobia)</td></tr>
+                                                <tr style="height: 40px;"><td>Loss of smell (Hyposmia)</td></tr>
+                                                <tr style="height: 40px;"><td>Dull pain in and around jaws when eating.  (Jaw Claudation)</td></tr>
+                                                <tr style="height: 40px;"><td>Jaw Locking, Restricted Jaw Movement, Jaw Noise</td></tr>
+                                                <tr style="height: 40px;"><td>Jaw Tenderness</td></tr>
+                                                <tr style="height: 40px;"><td>Grinding of teeth (Bruxism)</td></tr>
+                                                <tr style="height: 40px;"><td>Involuntary   Muscle contractions (Focal dystonia)</td></tr>
+                                                <tr style="height: 60px;"><td>Pain and stiffness in multiple muscles (Poly myalgia Rheumatica)</td></tr>
+                                                <tr style="height: 40px;"><td>Enlarged, Tortuous and Tender Temporal artery </td></tr>
+                                                <tr style="height: 40px;"><td>Spesific sholder pain</td></tr>
+                                                <tr style="height: 40px;"><td>Diplopia (double vision)</td></tr>
+                                                <tr style="height: 40px;"><td>purulent Nasal Secretion</td></tr>
+                                                <tr style="height: 40px;"><td>Nasal Obstruction</td></tr>
+                                                <tr style="height: 40px;"><td>Fever</td></tr>
+                                                <tr style="height: 40px;"><td>Blurred Vision</td></tr>
+                                                <tr style="height: 40px;"><td>Daytime sleepiness</td></tr>
+                                                <tr style="height: 40px;"><td>Pupils big, and eyelid hanging low (Horners syndrome)</td></tr>
+                                                <tr style="height: 40px;"><td>Papillodema</td></tr>
+                                                <tr style="height: 40px;"><td>Black outs (Transcient Ischemic Attack)</td></tr>
+                                                <tr style="height: 40px;"><td>leaky nose or very runny  (csf leak)</td></tr>
+                                                <tr style="height: 40px;"><td>Vommiting</td></tr>
+                                                <tr style="height: 40px;"><td>depressed consciousness</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
 
 
 
