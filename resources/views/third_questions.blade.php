@@ -365,6 +365,51 @@
                                     </td>
                                 </tr>
 
+                                {{-- seventh row --}}
+                                <tr>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 90px;"><td>Question 7: Which describe your head ache the best?</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 90px;">
+                                                    <td class="text-center">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="question_7" name="question_7">
+                                                                <option value="" selected disabled>Choose one</option>
+                                                                <option value="the_intensity_is_always_more_or_less_the_same_platonic">The Intensity is always more or less the same (platonic)</option>
+                                                                <option value="every_time_worse_thant_the_previous_time_progressive">Every time worse thant the previous time (progressive)</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="third_column">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 90px;"><td class="middle_column"> platonicity</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 45px;"><td>The Intensity is always more or less the same (platonic)</td></tr>
+                                                <tr style="height: 45px;"><td>Every time worse thant the previous time (progressive)</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+
+
 
 
 
