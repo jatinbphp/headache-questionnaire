@@ -38,7 +38,7 @@
                 </ul>
             </div>
 
-            {!! Form::open(['method'=>'POST','id' => 'secondForm', 'class' => 'form-horizontal']) !!}
+            {!! Form::open(['method'=>'POST','id' => 'thirdForm', 'class' => 'form-horizontal']) !!}
             <div class="row">
                 <div class="col-md-12">
                     <div class="table-responsive fixed-table-body">
@@ -1003,7 +1003,7 @@
                                                 <tr style="height: 80px;">
                                                     <td class="text-center">
                                                         <div class="form-group">
-                                                            <select class="form-control" id="question_6" name="question_6">
+                                                            <select class="form-control" id="question_13" name="question_13">
                                                                 <option value="" selected disabled>Choose one</option>
                                                                 <option value="lying_down">lying down</option>
                                                                 <option value="standing_up">Standing up?</option>
@@ -1030,7 +1030,6 @@
                                         </table>
                                     </td>
                                 </tr>
-
                             </tbody>
                         </table>
                     </div>
@@ -1068,10 +1067,10 @@
 <script type="text/javascript">
 function handleSubmit(){
     event.preventDefault();
-    var formData = $("#secondForm").serialize();
+    var formData = $("#thirdForm").serialize();
     $.ajax({
         type: "POST", 
-        url: "{{route('getSecondFormData')}}",
+        url: "{{route('getThirdFormData')}}",
         data: formData,
         success: function (response) {
             $("#success").show();

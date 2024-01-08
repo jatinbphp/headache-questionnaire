@@ -26,6 +26,8 @@ Route::post('secondFormData',[SecondQuestionnairController::class,'getFormData']
 
 /*third-questionnaire*/
 Route::get('3',[ThirdQuestionnairController::class,'showQuestionsForm']);
+Route::post('thirdFormData',[ThirdQuestionnairController::class,'getFormData'])->name('getThirdFormData');
+
 
 
 
