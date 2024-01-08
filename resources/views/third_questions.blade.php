@@ -108,7 +108,7 @@
                                     <td class="third_column">
                                         <table class="table table-sm table-bordered">
                                             <tbody>
-                                                <tr style="height: 360px;"><td class="middle_column bg-warning"> Age of Onset</td></tr>
+                                                <tr style="height: 360px;"><td class="middle_column"> Trigger</td></tr>
                                             </tbody>
                                         </table>
                                     </td>
@@ -127,6 +127,56 @@
                                         </table>
                                     </td>
                                 </tr>
+
+                                {{-- second row --}}
+                                <tr>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 180px;"><td> Question 2: How long does it take from when you become aware of the head ache, until it is at its worst?</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 180px;">
+                                                    <td class="text-center">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="question_2" name="question_2">
+                                                                <option value="" selected disabled>Choose one</option>
+                                                                <option value="trauma">Hyper acute  - In minutes</option>
+                                                                <option value="brain_heamorrhage">Acute within an hour , esp after strenous activity, acute stress, sex</option>
+                                                                <option value="darkness">Slow onset - hours</option>
+                                                                <option value="instrainious_activity">Progressive</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="third_column">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 180px;"><td class="middle_column"> Speed of progression</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;"><td>Hyper acute  - In minutes</td></tr>
+                                                <tr style="height: 60px;"><td>Acute within an hour , esp after strenous activity, acute stress, sex</td></tr>
+                                                <tr style="height: 40px;"><td>Slow onset - hours</td></tr>
+                                                <tr style="height: 40px;"><td>Progressive</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+
+
 
                             </tbody>
                         </table>
