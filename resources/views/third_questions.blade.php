@@ -88,7 +88,7 @@
                                                 <tr style="height: 360px;">
                                                     <td class="text-center">
                                                         <div class="form-group">
-                                                            <select class="form-control" id="question_2" name="question_2">
+                                                            <select class="form-control" id="question_1" name="question_1">
                                                                 <option value="" selected disabled>Choose one</option>
                                                                 <option value="trauma">Trauma: with 7 days of Phisical Trauma to the head</option>
                                                                 <option value="brain_heamorrhage">Brain Heamorrhage 2ndary to HTN, Strain often Subarachnoid Hemorage</option>
@@ -218,6 +218,51 @@
                                                 <tr style="height: 40px;"><td>Day time</td></tr>
                                                 <tr style="height: 40px;"><td>All the time</td></tr>
                                                 <tr style="height: 40px;"><td>Any time</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                {{-- fourth row --}}
+                                <tr>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 120px;"><td>Question 4: How old were you when the head ache started?</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 120px;">
+                                                    <td class="text-center">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="question_4" name="question_4">
+                                                                <option value="" selected disabled>Choose one</option>
+                                                                <option value="any_age_between_2_years_and_99_years">Any age between 2 years and 99 years.</option>
+                                                                <option value="midlife">Midlife</option>
+                                                                <option value="after_age_60">After age 60</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="third_column">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 120px;"><td class="middle_column"> Age of Onset</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;"><td>Any age between 2 years and 99 years.</td></tr>
+                                                <tr style="height: 40px;"><td>Midlife</td></tr>
+                                                <tr style="height: 40px;"><td>After age 60</td></tr>
                                             </tbody>
                                         </table>
                                     </td>
