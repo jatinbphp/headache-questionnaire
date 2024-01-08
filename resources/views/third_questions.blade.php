@@ -408,6 +408,137 @@
                                     </td>
                                 </tr>
 
+                                {{-- eighth row --}}
+                                <tr>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 80px;"><td>Question 8: which describe your head ache the best?</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-center">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="question_8" name="question_8">
+                                                                <option value="" selected disabled>Choose one</option>
+                                                                <option value="constant">It is there most of the time (Constant)</option>
+                                                                <option value="intermittant">It comes and goes (intermittant)</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="third_column">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 80px;"><td class="middle_column">Temporal <br> Pattern</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;"><td>It is there most of the time (Constant)</td></tr>
+                                                <tr style="height: 40px;"><td>It comes and goes (intermittant)</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                {{-- nineth row --}}
+                                <tr>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 80px;"><td>Question 9: How severe is the pain?</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-center">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="question_9" name="question_9">
+                                                                <option value="" selected disabled>Choose one</option>
+                                                                <option value="mild_head_ache_or_dyscomfort">Mild Head Ache or Dyscomfort</option>
+                                                                <option value="severe_pain">Severe Pain</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="third_column">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 80px;"><td class="middle_column">Intensity</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;"><td>Mild  Head Ache or Dyscomfort</td></tr>
+                                                <tr style="height: 40px;"><td>Severe Pain</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                {{-- tenth row --}}
+                                <tr>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 120px;"><td>Question 10: Which one describes the character of the pain most accurately?</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 120px;">
+                                                    <td class="text-center">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="question_10" name="question_10">
+                                                                <option value="" selected disabled>Choose one</option>
+                                                                <option value="pulsatile_throbing">Pulsatile/throbing</option>
+                                                                <option value="oppressive">Oppressive</option>
+                                                                <option value="difuse_general">Difuse/General</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="third_column">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 120px;"><td class="middle_column">Character</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;"><td>Pulsatile/throbing</td></tr>
+                                                <tr style="height: 40px;"><td>oppressive</td></tr>
+                                                <tr style="height: 40px;"><td>Difuse/General</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
 
 
 
