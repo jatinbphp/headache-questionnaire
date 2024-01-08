@@ -875,6 +875,162 @@
                                     </td>
                                 </tr>
 
+                                {{-- twelveth row --}}
+                                <tr>
+                                    <td>
+                                         <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 400px;"><td> Question 12: What makes the head ache worse?</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="valsalva_maneuvre" value="1"> Yes
+                                                        <input type="radio" name="valsalva_maneuvre" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="bending_the_head_fw" value="1"> Yes
+                                                        <input type="radio" name="bending_the_head_fw" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="bending_head_back_wards_retroflexion" value="1"> Yes
+                                                        <input type="radio" name="bending_head_back_wards_retroflexion" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="head_turning" value="1"> Yes
+                                                        <input type="radio" name="head_turning" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="swallowing" value="1"> Yes
+                                                        <input type="radio" name="swallowing" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                 <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="coughing_strain_sexual_activity" value="1"> Yes
+                                                        <input type="radio" name="coughing_strain_sexual_activity" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="upright_position" value="1"> Yes
+                                                        <input type="radio" name="upright_position" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="mastication_muscles" value="1"> Yes
+                                                        <input type="radio" name="mastication_muscles" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="chewing_mastication" value="1"> Yes
+                                                        <input type="radio" name="chewing_mastication" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="height: 40px;">
+                                                    <td>
+                                                        <input type="radio" name="head_movement" value="1"> Yes
+                                                        <input type="radio" name="head_movement" value="0" checked> No  
+                                                    </td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </td>
+
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr class="third_column" style="height: 400px;"><td class="middle_column">Exassetbated by</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;"><td>Valsalva Maneuvre</td></tr>
+                                                <tr style="height: 40px;"><td>Bending the head FW</td></tr>
+                                                <tr style="height: 40px;"><td>Bending head back wards (Retroflexion)</td></tr>
+                                                <tr style="height: 40px;"><td>Head turning</td></tr>
+                                                <tr style="height: 40px;"><td>Swallowing</td></tr>
+                                                <tr style="height: 40px;"><td>Coughing, Strain, Sexual activity</td></tr>
+                                                <tr style="height: 40px;"><td>Upright Position</td></tr>
+                                                <tr style="height: 40px;"><td>Palpitation of muscles around jaws ( Mastication Muscles)</td></tr>
+                                                <tr style="height: 40px;"><td>Chewing (Mastication)</td></tr>
+                                                <tr style="height: 40px;"><td>Head Movement</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                {{-- thirteenth row --}}
+                                <tr>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 80px;"><td>Question 13: What makes the head ache better?</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-center">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="question_6" name="question_6">
+                                                                <option value="" selected disabled>Choose one</option>
+                                                                <option value="both_sides_bilataral">Both Sides (Bilataral)</option>
+                                                                <option value="only_left_or_right_side_unilateral">Only left or right side (Unilateral)</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="third_column">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 80px;"><td class="middle_column"> laterality</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;"><td>Both Sides (Bilataral)</td></tr>
+                                                <tr style="height: 40px;"><td>Only left or right side (Unilateral)</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
 
 
 
