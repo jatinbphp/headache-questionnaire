@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestionnairController;
 use App\Http\Controllers\SecondQuestionnairController;
+use App\Http\Controllers\ThirdQuestionnairController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::get('2',[SecondQuestionnairController::class,'showQuestionsForm']);
 Route::post('secondFormData',[SecondQuestionnairController::class,'getFormData'])->name('getSecondFormData');
 
 /*third-questionnaire*/
+Route::get('3',[ThirdQuestionnairController::class,'showQuestionsForm']);
+
 
 
 

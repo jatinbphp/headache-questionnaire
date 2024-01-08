@@ -44,7 +44,7 @@
                     <div class="table-responsive fixed-table-body">
                         <table class="table table-sm table-borderless">
                             <tbody>
-                                {{-- first row --}}
+                                {{-- table header --}}
                                 <tr class="table_header">
                                     <td class="section_header border-0" style="width: 35%">
                                         <table class="table table-sm table-bordered">
@@ -72,6 +72,62 @@
                                         </table>
                                     </td>
                                 </tr>
+
+                                {{--  first row --}}
+                                <tr>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 360px;"><td> Question 1: What triggered or triggers your head ache?</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 360px;">
+                                                    <td class="text-center">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="question_2" name="question_2">
+                                                                <option value="" selected disabled>Choose one</option>
+                                                                <option value="trauma">Trauma: with 7 days of Phisical Trauma to the head</option>
+                                                                <option value="brain_heamorrhage">Brain Heamorrhage 2ndary to HTN, Strain often Subarachnoid Hemorage</option>
+                                                                <option value="darkness">Darkness (Iridocorneal angle closure)</option>
+                                                                <option value="instrainious_activity">Instrainious activity, emotional stress or sex</option>
+                                                                <option value="neck_movement">Neck movement/Mechancal pressure on neck muscle?</option>
+                                                                <option value="don_t_know">Don't know/Unknown/not clear</option>
+                                                                <option value="heamoorhaging_into_the_arterial_wall">Heamoorhaging into the arterial wall due to "binign trauma". Strain, Coughing, Nose blow.</option>
+                                                                <option value="event_that_leaks_icf">Event that leaks ICF, eg. Lumbar Puncture or CSF Vistula</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="third_column">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 360px;"><td class="middle_column bg-warning"> Age of Onset</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;"><td>Trauma: with 7 days of Phisical Trauma to the head</td></tr>
+                                                <tr style="height: 60px;"><td>Brain Heamorrhage 2ndary to HTN, Strain often Subarachnoid Hemorage</td></tr>
+                                                <tr style="height: 40px;"><td>Darkness (Iridocorneal angle closure)</td></tr>
+                                                <tr style="height: 40px;"><td>Strainious activity, emotional stress or sex</td></tr>
+                                                <tr style="height: 40px;"><td>Neck movement/Mechancal pressure on neck muscle?</td></tr>
+                                                <tr style="height: 40px;"><td>Don't know/Unknown/not clear</td></tr>
+                                                <tr style="height: 60px;"><td>Heamoorhaging into the arterial wall due to "binign trauma". Strain, Coughing, Nose blow.</td></tr>
+                                                <tr style="height: 40px;"><td>Event that leaks ICF, eg. Lumbar Puncture or CSF Vistula</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
                             </tbody>
                         </table>
                     </div>
