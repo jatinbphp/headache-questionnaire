@@ -145,10 +145,10 @@
                                                         <div class="form-group">
                                                             <select class="form-control" id="question_2" name="question_2">
                                                                 <option value="" selected disabled>Choose one</option>
-                                                                <option value="trauma">Hyper acute  - In minutes</option>
-                                                                <option value="brain_heamorrhage">Acute within an hour , esp after strenous activity, acute stress, sex</option>
-                                                                <option value="darkness">Slow onset - hours</option>
-                                                                <option value="instrainious_activity">Progressive</option>
+                                                                <option value="hyper_acute_in_minutes">Hyper acute  - In minutes</option>
+                                                                <option value="acute_within_an_hour">Acute within an hour , esp after strenous activity, acute stress, sex</option>
+                                                                <option value="slow_onset_hours">Slow onset - hours</option>
+                                                                <option value="progressive">Progressive</option>
                                                             </select>
                                                         </div>
                                                     </td>
@@ -170,6 +170,54 @@
                                                 <tr style="height: 60px;"><td>Acute within an hour , esp after strenous activity, acute stress, sex</td></tr>
                                                 <tr style="height: 40px;"><td>Slow onset - hours</td></tr>
                                                 <tr style="height: 40px;"><td>Progressive</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                {{-- third row --}}
+                                <tr>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 200px;"><td> Question 3: During a typical 24 hour period, when is the head ache most likely to occur?</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 200px;">
+                                                    <td class="text-center">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="question_3" name="question_3">
+                                                                <option value="" selected disabled>Choose one</option>
+                                                                <option value="at_night_nocturnal">At night (Nocturnal)</option>
+                                                                <option value="day_time">Day time</option>
+                                                                <option value="all_the_time">all the time</option>
+                                                                <option value="any_time">Any time</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="third_column">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 200px;"><td class="middle_column"> Circadian Pattern <br> (ask when worse)</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;"><td>In morning</td></tr>
+                                                <tr style="height: 40px;"><td>At night (Nocturnal)</td></tr>
+                                                <tr style="height: 40px;"><td>Day time</td></tr>
+                                                <tr style="height: 40px;"><td>All the time</td></tr>
+                                                <tr style="height: 40px;"><td>Any time</td></tr>
                                             </tbody>
                                         </table>
                                     </td>
