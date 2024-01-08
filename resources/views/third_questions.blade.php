@@ -1005,8 +1005,8 @@
                                                         <div class="form-group">
                                                             <select class="form-control" id="question_6" name="question_6">
                                                                 <option value="" selected disabled>Choose one</option>
-                                                                <option value="both_sides_bilataral">Both Sides (Bilataral)</option>
-                                                                <option value="only_left_or_right_side_unilateral">Only left or right side (Unilateral)</option>
+                                                                <option value="lying_down">lying down</option>
+                                                                <option value="standing_up">Standing up?</option>
                                                             </select>
                                                         </div>
                                                     </td>
@@ -1017,24 +1017,19 @@
                                     <td class="third_column">
                                         <table class="table table-sm table-bordered">
                                             <tbody>
-                                                <tr style="height: 80px;"><td class="middle_column"> laterality</td></tr>
+                                                <tr style="height: 80px;"><td class="middle_column"> Improved<br>By</td></tr>
                                             </tbody>
                                         </table>
                                     </td>
                                     <td>
                                         <table class="table table-sm table-bordered">
                                             <tbody>
-                                                <tr style="height: 40px;"><td>Both Sides (Bilataral)</td></tr>
-                                                <tr style="height: 40px;"><td>Only left or right side (Unilateral)</td></tr>
+                                                <tr style="height: 40px;"><td>lying down</td></tr>
+                                                <tr style="height: 40px;"><td>Standing up?</td></tr>
                                             </tbody>
                                         </table>
                                     </td>
                                 </tr>
-
-
-
-
-
 
                             </tbody>
                         </table>
@@ -1045,7 +1040,7 @@
             <div class="row">
                 <div class="col-4">
                     <div class="align-self-end">
-                        <a href="{{ url('/') }}" type="button" class="btn btn-warning">Previous Page</a>
+                        <a href="{{ url('/2') }}" type="button" class="btn btn-warning">Previous Page</a>
                     </div>
                 </div>
 
@@ -1057,7 +1052,7 @@
 
                 <div class="col-4">
                     <div class="align-self-end float-end">
-                        <a href="{{ url('/') }}" type="button" class="btn btn-warning">Next Page</a>
+                        <a href="{{ url('/') }}" type="button" class="btn btn-warning" style="pointer-events: none; cursor: default;">Next Page</a>
                     </div>
                 </div>
             </div>
