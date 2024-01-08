@@ -288,6 +288,7 @@
                                                                 <option value="" selected disabled>Choose one</option>
                                                                 <option value="neck">Neck</option>
                                                                 <option value="face">Face</option>
+                                                                <option value="whole_head">Face</option>
                                                                 <option value="orbital_and_periorbital">Orbital and Periorbital</option>
                                                                 <option value="in_and_around_sholder">IN and around sholder</option>
                                                                 <option value="temple">Temple</option>
