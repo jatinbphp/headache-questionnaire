@@ -322,6 +322,49 @@
                                     </td>
                                 </tr>
 
+                                {{-- sixth row --}}
+                                <tr>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 80px;"><td>Question 6: On which side of the head is the head ache?</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-center">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="question_6" name="question_6">
+                                                                <option value="" selected disabled>Choose one</option>
+                                                                <option value="both_sides_bilataral">Both Sides (Bilataral)</option>
+                                                                <option value="only_left_or_right_side_unilateral">Only left or right side (Unilateral)</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="third_column">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 80px;"><td class="middle_column"> laterality</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;"><td>Both Sides (Bilataral)</td></tr>
+                                                <tr style="height: 40px;"><td>Only left or right side (Unilateral)</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
 
 
 
