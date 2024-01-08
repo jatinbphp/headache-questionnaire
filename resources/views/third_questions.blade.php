@@ -268,6 +268,60 @@
                                     </td>
                                 </tr>
 
+                                {{-- fifth row --}}
+                                <tr>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 320px;"><td>Question 5: Where on your head is the head ache?</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 320px;">
+                                                    <td class="text-center">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="question_5" name="question_5">
+                                                                <option value="" selected disabled>Choose one</option>
+                                                                <option value="neck">Neck</option>
+                                                                <option value="face">Face</option>
+                                                                <option value="orbital_and_periorbital">Orbital and Periorbital</option>
+                                                                <option value="in_and_around_sholder">IN and around sholder</option>
+                                                                <option value="temple">Temple</option>
+                                                                <option value="frontal">Frontal</option>
+                                                                <option value="posterior">Posterior</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="third_column">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 320px;"><td class="middle_column"> Location</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr style="height: 40px;"><td>Neck</td></tr>
+                                                <tr style="height: 40px;"><td>Face</td></tr>
+                                                <tr style="height: 40px;"><td>whole head</td></tr>
+                                                <tr style="height: 40px;"><td>Orbital and Periorbital</td></tr>
+                                                <tr style="height: 40px;"><td>IN and around sholder</td></tr>
+                                                <tr style="height: 40px;"><td>Temple</td></tr>
+                                                <tr style="height: 40px;"><td>Frontal</td></tr>
+                                                <tr style="height: 40px;"><td>Posterior</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
 
 
 
