@@ -12,6 +12,16 @@
     ];
 @endphp
 <div class="content-wrapper">
+    <section class="container content-header">
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col-sm-12">
+                    <h4 class="text-center">Primary Headache Questionnaire</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="container content">        
         <div class="card card-info p-3">
             <div class="row">
