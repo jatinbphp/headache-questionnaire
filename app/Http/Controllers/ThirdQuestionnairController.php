@@ -511,8 +511,13 @@ class ThirdQuestionnairController extends Controller{
         $head_movement_data = isset($head_movement[$request->head_movement]) ? $head_movement[$request->head_movement] : null;
         $this->setScore($head_movement_data);
 
-
-
+        /*Question 13: What makes the head ache better?*/
+        $question_13 = [
+            'lying_down'    => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 1, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            'standing_up'   => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $question_13_data = isset($question_13[$request->question_13]) ? $question_13[$request->question_13] : null;
+        $this->setScore($question_13_data);
 
 
 
