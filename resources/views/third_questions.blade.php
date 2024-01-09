@@ -906,8 +906,8 @@
 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="bending_head_back_wards_retroflexion" value="1"> Yes
-                                                        <input type="radio" name="bending_head_back_wards_retroflexion" value="0" checked> No  
+                                                        <input type="radio" name="retroflexion" value="1"> Yes
+                                                        <input type="radio" name="retroflexion" value="0" checked> No  
                                                     </td>
                                                 </tr>
 

@@ -428,7 +428,92 @@ class ThirdQuestionnairController extends Controller{
         $depressed_consciousness_data = isset($depressed_consciousness[$request->depressed_consciousness]) ? $depressed_consciousness[$request->depressed_consciousness] : null;
         $this->setScore($depressed_consciousness_data);
 
-        
+        /*Question 12: What makes the head ache worse?*/
+        $valsalva_maneuvre = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $valsalva_maneuvre_data = isset($valsalva_maneuvre[$request->valsalva_maneuvre]) ? $valsalva_maneuvre[$request->valsalva_maneuvre] : null;
+        $this->setScore($valsalva_maneuvre_data);
+
+        /*Bending the head FW*/
+        $bending_the_head_fw = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 1, 'q' => 0, 'r' => 0],
+        ];
+        $bending_the_head_fw_data = isset($bending_the_head_fw[$request->bending_the_head_fw]) ? $bending_the_head_fw[$request->bending_the_head_fw] : null;
+        $this->setScore($bending_the_head_fw_data);
+
+        /*Bending head back wards (Retroflexion)*/
+        $retroflexion = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $retroflexion_data = isset($retroflexion[$request->retroflexion]) ? $retroflexion[$request->retroflexion] : null;
+        $this->setScore($retroflexion_data);
+
+        /*Head turning*/
+        $head_turning = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 1, 'q' => 0, 'r' => 0],
+        ];
+        $head_turning_data = isset($head_turning[$request->head_turning]) ? $head_turning[$request->head_turning] : null;
+        $this->setScore($head_turning_data);
+
+        /*Swallowing*/
+        $swallowing = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $swallowing_data = isset($swallowing[$request->swallowing]) ? $swallowing[$request->swallowing] : null;
+        $this->setScore($swallowing_data);
+
+        /*Coughing, Strain, Sexual activity*/
+        $coughing_strain_sexual_activity = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 1, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 1, 'q' => 0, 'r' => 0],
+        ];
+        $coughing_strain_sexual_activity_data = isset($coughing_strain_sexual_activity[$request->coughing_strain_sexual_activity]) ? $coughing_strain_sexual_activity[$request->coughing_strain_sexual_activity] : null;
+        $this->setScore($coughing_strain_sexual_activity_data);
+
+        /*Upright Position*/
+        $upright_position = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $upright_position_data = isset($upright_position[$request->upright_position]) ? $upright_position[$request->upright_position] : null;
+        $this->setScore($upright_position_data);
+
+        /*Palpitation of muscles around jaws ( Mastication Muscles)*/
+        $mastication_muscles = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 1],
+        ];
+
+        $mastication_muscles_data = isset($mastication_muscles[$request->mastication_muscles]) ? $mastication_muscles[$request->mastication_muscles] : null;
+        $this->setScore($mastication_muscles_data);
+
+        /*Chewing (Mastication)*/
+        $chewing_mastication = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 1],
+        ];
+
+        $chewing_mastication_data = isset($chewing_mastication[$request->chewing_mastication]) ? $chewing_mastication[$request->chewing_mastication] : null;
+        $this->setScore($chewing_mastication_data);
+
+        /*Head Movement*/
+        $head_movement = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 0],
+        ];
+
+        $head_movement_data = isset($head_movement[$request->head_movement]) ? $head_movement[$request->head_movement] : null;
+        $this->setScore($head_movement_data);
+
+
+
+
 
 
 
