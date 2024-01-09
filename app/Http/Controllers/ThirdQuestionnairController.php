@@ -519,15 +519,44 @@ class ThirdQuestionnairController extends Controller{
         $question_13_data = isset($question_13[$request->question_13]) ? $question_13[$request->question_13] : null;
         $this->setScore($question_13_data);
 
+        $results = [
+            'Post Traumatic Head Ache'                                  => isset(Session::get('score')['a']) ? Session::get('score')['a'] : null,
+            'Whiplash'                                                  => isset(Session::get('score')['b']) ? Session::get('score')['b'] : null,
+            'Head Ache in Acute Stroke'                                 => isset(Session::get('score')['c']) ? Session::get('score')['c'] : null,
+            'Giant Cell Arteritis'                                      => isset(Session::get('score')['d']) ? Session::get('score')['d'] : null,
+            'Arterial Desection'                                        => isset(Session::get('score')['e']) ? Session::get('score')['e'] : null,
+            'Hydrocephalus and Intra Crania Tumor'                      => isset(Session::get('score')['f']) ? Session::get('score')['f'] : null,
+            'Pseudotumor Cerebri/Idiopathic Intracanial Hypertention'   => isset(Session::get('score')['g']) ? Session::get('score')['g'] : null,
+            'LOW Serebrospinal Fluid Pressure'                          => isset(Session::get('score')['h']) ? Session::get('score')['h'] : null,
+            'Sleep Apnea Syndrome'                                      => isset(Session::get('score')['i']) ? Session::get('score')['i'] : null,
+            '2ndary Cervicogenig Head Ache due to trauma, tumors, lesions in C 2 and 2'  => isset(Session::get('score')['j']) ? Session::get('score')['j'] : null,
+            'Retropharyngial Tendonitis (rare)'                         => isset(Session::get('score')['k']) ? Session::get('score')['k'] : null,
+            'Focal Cervical Dystonia'                                   => isset(Session::get('score')['l']) ? Session::get('score')['l'] : null,
+            'Glaucoma'                                                  => isset(Session::get('score')['m']) ? Session::get('score')['m'] : null,
+            'Inflamatory Disorder'                                      => isset(Session::get('score')['n']) ? Session::get('score')['n'] : null,
+            'Refractive Error/Muscle Imbalance'                         => isset(Session::get('score')['o']) ? Session::get('score')['o'] : null,
+            'Acute Sinusitus'                                           => isset(Session::get('score')['p']) ? Session::get('score')['p'] : null,
+            'Arthrogenous (joint)'                                      => isset(Session::get('score')['q']) ? Session::get('score')['q'] : null,
+            'Myogenous (Muscular)'                                      => isset(Session::get('score')['r']) ? Session::get('score')['r'] : null,
+        ];
 
+        $score = 0;
+        if(Session::has('score') && !empty(Session::get('score'))){
+            foreach(Session::get('score') as $keys => $values){
+                $score = (($score) + ($values));
+            }
+        }
 
+        /*send mail to the admin*/
+        //$this->sendMail($score, $results);
 
+        $response = [
+            'results'    => $results,
+            'score'      => $score,
+            'status'     => 200,
+        ];
 
-
-
-
-        return Session::get('score');
-
+        return response()->json($response, 200);
     }
 
     private function setScore($values){
