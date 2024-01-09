@@ -640,15 +640,15 @@
 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="restricted_neck_and_sholder_movements" value="1"> Yes
-                                                        <input type="radio" name="restricted_neck_and_sholder_movements" value="0" checked> No  
+                                                        <input type="radio" name="sholder_movements" value="1"> Yes
+                                                        <input type="radio" name="sholder_movements" value="0" checked> No  
                                                     </td>
                                                 </tr>
 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="reduced_hearing_hypoacusis" value="1"> Yes
-                                                        <input type="radio" name="reduced_hearing_hypoacusis" value="0" checked> No  
+                                                        <input type="radio" name="hypoacusis" value="1"> Yes
+                                                        <input type="radio" name="hypoacusis" value="0" checked> No  
                                                     </td>
                                                 </tr>
 
