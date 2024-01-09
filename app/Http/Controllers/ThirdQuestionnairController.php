@@ -15,19 +15,19 @@ class ThirdQuestionnairController extends Controller{
     }
 
     public function getFormData(Request $request){
-        // $request->validate([
-        //     'question_1'    => 'required',
-        //     'question_2'    => 'required',
-        //     'question_3'    => 'required',
-        //     'question_4'    => 'required',
-        //     'question_5'    => 'required',
-        //     'question_6'    => 'required',
-        //     'question_7'    => 'required',
-        //     'question_8'    => 'required',
-        //     'question_9'    => 'required',
-        //     'question_10'   => 'required',
-        //     'question_13'   => 'required',
-        // ]);
+        $request->validate([
+            'question_1'    => 'required',
+            'question_2'    => 'required',
+            'question_3'    => 'required',
+            'question_4'    => 'required',
+            'question_5'    => 'required',
+            'question_6'    => 'required',
+            'question_7'    => 'required',
+            'question_8'    => 'required',
+            'question_9'    => 'required',
+            'question_10'   => 'required',
+            'question_13'   => 'required',
+        ]);
 
         if(Session::has('score')){
             Session::forget('score');
@@ -573,5 +573,12 @@ class ThirdQuestionnairController extends Controller{
 
         Session::put('score', $data);
         return Session::get('score');
+    }
+
+    public function sendMail($score, $results){
+        Mail::send('survey_results', ['results'=> $results,'score'=>$score ], function ($message) {
+            $message->from('info@admin.com', 'Headache');
+            $message->to("gert@gsdm.co.za")->subject('New Form Submitted: '.date("Y-m-d"));
+        }); 
     }
 }

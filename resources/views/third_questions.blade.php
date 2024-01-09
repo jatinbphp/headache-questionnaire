@@ -1079,6 +1079,15 @@
 <script type="text/javascript">
 function handleSubmit(){
     event.preventDefault();
+    var user = '{{ session()->has('user') ? true : false }}';
+    if(!user){
+        var errorMsg = "<li>Please fill user details in the first questionnaire form</li>";
+        $("#errorDivision ul").html(errorMsg);
+        $("#errorDivision").css({"display": "block"});
+        $(window).scrollTop(0);
+        return false;
+    }
+
     var formData = $("#thirdForm").serialize();
     $.ajax({
         type: "POST", 
