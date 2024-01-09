@@ -654,29 +654,29 @@
 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="ringing_in_the_ears_tinnitus" value="1"> Yes
-                                                        <input type="radio" name="ringing_in_the_ears_tinnitus" value="0" checked> No  
+                                                        <input type="radio" name="tinnitus" value="1"> Yes
+                                                        <input type="radio" name="tinnitus" value="0" checked> No  
                                                     </td>
                                                 </tr>
                                                 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="tired_eyes_astenopia" value="1"> Yes
-                                                        <input type="radio" name="tired_eyes_astenopia" value="0" checked> No  
+                                                        <input type="radio" name="astenopia" value="1"> Yes
+                                                        <input type="radio" name="astenopia" value="0" checked> No  
                                                     </td>
                                                 </tr>
 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="eyes_sensitive_to_light_photophobia" value="1"> Yes
-                                                        <input type="radio" name="eyes_sensitive_to_light_photophobia" value="0" checked> No  
+                                                        <input type="radio" name="photophobia" value="1"> Yes
+                                                        <input type="radio" name="photophobia" value="0" checked> No  
                                                     </td>
                                                 </tr>
 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="loss_of_smell_hyposmia" value="1"> Yes
-                                                        <input type="radio" name="loss_of_smell_hyposmia" value="0" checked> No  
+                                                        <input type="radio" name="hyposmia" value="1"> Yes
+                                                        <input type="radio" name="hyposmia" value="0" checked> No  
                                                     </td>
                                                 </tr>
 
@@ -724,8 +724,8 @@
 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="enlarged_tortuous_and_tender_temporal_artery" value="1"> Yes
-                                                        <input type="radio" name="enlarged_tortuous_and_tender_temporal_artery" value="0" checked> No  
+                                                        <input type="radio" name="enlarged_tortuous" value="1"> Yes
+                                                        <input type="radio" name="enlarged_tortuous" value="0" checked> No  
                                                     </td>
                                                 </tr>
                                                 
@@ -738,15 +738,15 @@
 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="diplopia_double_vision" value="1"> Yes
-                                                        <input type="radio" name="diplopia_double_vision" value="0" checked> No  
+                                                        <input type="radio" name="diplopia" value="1"> Yes
+                                                        <input type="radio" name="diplopia" value="0" checked> No  
                                                     </td>
                                                 </tr>
 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="purulent_nasal_secretion" value="1"> Yes
-                                                        <input type="radio" name="purulent_nasal_secretion" value="0" checked> No  
+                                                        <input type="radio" name="purulent_nasal" value="1"> Yes
+                                                        <input type="radio" name="purulent_nasal" value="0" checked> No  
                                                     </td>
                                                 </tr>
 
@@ -801,8 +801,8 @@
                                                 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="leaky_nose_or_very_runny" value="1"> Yes
-                                                        <input type="radio" name="leaky_nose_or_very_runny" value="0" checked> No  
+                                                        <input type="radio" name="leaky_nose" value="1"> Yes
+                                                        <input type="radio" name="leaky_nose" value="0" checked> No  
                                                     </td>
                                                 </tr>
 

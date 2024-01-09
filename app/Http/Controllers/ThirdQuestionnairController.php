@@ -235,6 +235,201 @@ class ThirdQuestionnairController extends Controller{
         $hypoacusis_data = isset($hypoacusis[$request->hypoacusis]) ? $hypoacusis[$request->hypoacusis] : null;
         $this->setScore($hypoacusis_data);
 
+        /*Ringing in the ears (Tinnitus)*/
+        $tinnitus = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 1, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $tinnitus_data = isset($tinnitus[$request->tinnitus]) ? $tinnitus[$request->tinnitus] : null;
+        $this->setScore($tinnitus_data);
+
+        /*Tired eyes (Astenopia)*/
+        $astenopia = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 1, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $astenopia_data = isset($astenopia[$request->astenopia]) ? $astenopia[$request->astenopia] : null;
+        $this->setScore($astenopia_data);
+
+        /*Eyes sensitive to light(Photophobia)*/
+        $photophobia = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 1, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $photophobia_data = isset($photophobia[$request->photophobia]) ? $photophobia[$request->photophobia] : null;
+        $this->setScore($astenopia_data);
+
+        /*Loss of smell (Hyposmia)*/
+        $hyposmia = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 1, 'q' => 0, 'r' => 0],
+        ];
+        $hyposmia_data = isset($hyposmia[$request->hyposmia]) ? $hyposmia[$request->hyposmia] : null;
+        $this->setScore($hyposmia_data);
+
+        /*Dull pain in and around jaws when eating. (Jaw Claudation)*/
+        $jaw_claudation = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 1, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $jaw_claudationa_data = isset($jaw_claudation[$request->jaw_claudation]) ? $jaw_claudation[$request->jaw_claudation] : null;
+        $this->setScore($jaw_claudationa_data);
+
+        /*Jaw Locking, Restricted Jaw Movement, Jaw Noise*/
+        $jaw_locking = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 1],
+        ];
+        $jaw_locking_data = isset($jaw_locking[$request->jaw_locking]) ? $jaw_locking[$request->jaw_locking] : null;
+        $this->setScore($jaw_locking_data);
+
+        /*Jaw Tenderness*/
+        $jaw_tenderness = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 0],
+        ];
+        $jaw_tenderness_data = isset($jaw_tenderness[$request->jaw_tenderness]) ? $jaw_tenderness[$request->jaw_tenderness] : null;
+        $this->setScore($jaw_tenderness_data);
+
+        /*Grinding of teeth (Bruxism)*/
+        $grinding_of_teeth_bruxism = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 1],
+        ];
+        $grinding_of_teeth_bruxism_data = isset($grinding_of_teeth_bruxism[$request->grinding_of_teeth_bruxism]) ? $grinding_of_teeth_bruxism[$request->grinding_of_teeth_bruxism] : null;
+        $this->setScore($grinding_of_teeth_bruxism_data);
+
+        /*Involuntary Muscle contractions (Focal dystonia)*/
+        $focal_dystonia = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $focal_dystonia_data = isset($focal_dystonia[$request->focal_dystonia]) ? $request->focal_dystonia : null;
+        $this->setScore($focal_dystonia_data);
+
+        /*Pain and stiffness in multiple muscles (Poly myalgia Rheumatica)*/
+        $poly_myalgia_rheumatica = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 1, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $poly_myalgia_rheumatica_data = isset($poly_myalgia_rheumatica[$request->poly_myalgia_rheumatica]) ? $poly_myalgia_rheumatica[$request->poly_myalgia_rheumatica] : null;
+        $this->setScore($poly_myalgia_rheumatica_data);
+
+        /*Enlarged, Tortuous and Tender Temporal artery*/
+        $enlarged_tortuous = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 1, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $enlarged_tortuous_data = isset($enlarged_tortuous[$request->enlarged_tortuous]) ? $enlarged_tortuous[$request->enlarged_tortuous] : null;
+        $this->setScore($enlarged_tortuous_data);
+
+        /*Spesific sholder pain*/
+        $spesific_sholder_pain = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 1, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+
+        $spesific_sholder_pain_data = isset($spesific_sholder_pain[$request->spesific_sholder_pain]) ? $spesific_sholder_pain[$request->spesific_sholder_pain] : null;
+        $this->setScore($spesific_sholder_pain_data);
+
+        /*Diplopia (double vision)*/
+        $diplopia = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 1, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $diplopia_data = isset($diplopia[$request->diplopia]) ? $diplopia[$request->diplopia] : null;
+        $this->setScore($diplopia_data);
+
+        /*purulent Nasal Secretion*/
+        $purulent_nasal = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 1, 'q' => 0, 'r' => 0],
+        ];
+        $purulent_nasal_data = isset($purulent_nasal[$request->purulent_nasal]) ? $purulent_nasal[$request->purulent_nasal] : null;
+        $this->setScore($purulent_nasal_data);
+
+        /*Nasal Obstruction*/
+        $nasal_obstruction = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 1, 'q' => 0, 'r' => 0],
+        ];
+        $nasal_obstruction_data = isset($nasal_obstruction[$request->nasal_obstruction]) ? $nasal_obstruction[$request->nasal_obstruction] : null;
+        $this->setScore($nasal_obstruction_data);
+
+        /*Fever*/
+        $fever = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 1, 'p' => 1, 'q' => 0, 'r' => 0],
+        ];
+        $fever_data = isset($fever[$request->fever]) ? $fever[$request->fever] : null;
+        $this->setScore($fever_data);
+
+        /*Blurred Vision*/
+        $blurred_vision = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 1, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 1, 'n' => 1, 'o' => 1, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $blurred_vision_data = isset($blurred_vision[$request->blurred_vision]) ? $blurred_vision[$request->blurred_vision] : null;
+        $this->setScore($blurred_vision_data);
+
+        /*Daytime sleepiness*/
+        $daytime_sleepiness = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $daytime_sleepiness_data = isset($daytime_sleepiness[$request->daytime_sleepiness]) ? $daytime_sleepiness[$request->daytime_sleepiness] : null;
+        $this->setScore($daytime_sleepiness_data);
+
+        /*Pupils big, and eyelid hanging low (Horners syndrome)*/
+        $horners_syndrome = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $horners_syndrome_data = isset($horners_syndrome[$request->horners_syndrome]) ? $horners_syndrome[$request->horners_syndrome] : null;
+        $this->setScore($horners_syndrome_data);
+
+        /*Papillodema*/
+        $papillodema = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $papillodema_data = isset($papillodema[$request->papillodema]) ? $papillodema[$request->papillodema] : null;
+        $this->setScore($papillodema_data);
+
+        /*Black outs (Transcient Ischemic Attack)*/
+        $black_outs = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $black_outs_data = isset($black_outs[$request->black_outs]) ? $black_outs[$request->black_outs] : null;
+        $this->setScore($black_outs_data);
+
+        /*leaky nose or very runny (csf leak)*/
+        $leaky_nose = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 1, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $leaky_nose_data = isset($leaky_nose[$request->leaky_nose]) ? $leaky_nose[$request->leaky_nose] : null;
+        $this->setScore($leaky_nose_data);
+
+        /*Vommiting*/
+        $vommiting = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $vommiting_data = isset($vommiting[$request->vommiting]) ? $vommiting[$request->vommiting] : null;
+        $this->setScore($vommiting_data);
+
+        /*depressed consciousness*/
+        $depressed_consciousness = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
+        $depressed_consciousness_data = isset($depressed_consciousness[$request->depressed_consciousness]) ? $depressed_consciousness[$request->depressed_consciousness] : null;
+        $this->setScore($depressed_consciousness_data);
+
+
+
 
 
 
