@@ -384,8 +384,8 @@
                                                         <div class="form-group">
                                                             <select class="form-control" id="question_7" name="question_7">
                                                                 <option value="" selected disabled>Choose one</option>
-                                                                <option value="the_intensity_is_always_more_or_less_the_same_platonic">The Intensity is always more or less the same (platonic)</option>
-                                                                <option value="every_time_worse_thant_the_previous_time_progressive">Every time worse thant the previous time (progressive)</option>
+                                                                <option value="platonic">The Intensity is always more or less the same (platonic)</option>
+                                                                <option value="progressive">Every time worse thant the previous time (progressive)</option>
                                                             </select>
                                                         </div>
                                                     </td>
@@ -470,7 +470,7 @@
                                                         <div class="form-group">
                                                             <select class="form-control" id="question_9" name="question_9">
                                                                 <option value="" selected disabled>Choose one</option>
-                                                                <option value="mild_head_ache_or_dyscomfort">Mild Head Ache or Dyscomfort</option>
+                                                                <option value="mild_head_ache">Mild Head Ache or Dyscomfort</option>
                                                                 <option value="severe_pain">Severe Pain</option>
                                                             </select>
                                                         </div>
