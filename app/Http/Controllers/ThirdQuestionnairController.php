@@ -95,7 +95,14 @@ class ThirdQuestionnairController extends Controller{
         $question_5_data = isset($question_5[$request->question_5]) ? $question_5[$request->question_5] : null;
         $this->setScore($question_5_data);
 
+        /*question -6*/
+        $question_6 = [
+            'both_sides_bilataral'               => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 1, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+            'only_left_or_right_side_unilateral' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 1, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 1, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
+        ];
 
+        $question_6_data = isset($question_6[$request->question_6]) ? $question_6[$request->question_6] : null;
+        $this->setScore($question_5_data);
 
         return Session::get('score');
 
