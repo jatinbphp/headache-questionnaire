@@ -1081,7 +1081,7 @@ function handleSubmit(){
     event.preventDefault();
     var user = '{{ session()->has('user') ? true : false }}';
     if(!user){
-        var errorMsg = "<li>Please fill user details in the first questionnaire form</li>";
+        var errorMsg = "<li>Please fillup user details in the first questionnaire form</li>";
         $("#errorDivision ul").html(errorMsg);
         $("#errorDivision").css({"display": "block"});
         $(window).scrollTop(0);
