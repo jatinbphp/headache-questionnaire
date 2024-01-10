@@ -1049,21 +1049,15 @@
             </div>
 
             <div class="row">
-                <div class="col-4">
+                <div class="col-6">
                     <div class="align-self-end">
                         <a href="{{ url('/2') }}" type="button" class="btn btn-warning">Previous Page</a>
                     </div>
                 </div>
 
-                <div class="col-4">
-                    <div class="align-self-end text-center">
-                         <button type="submit" onclick="handleSubmit()" class="btn btn-primary">Calculate Score</button> 
-                    </div>
-                </div>
-
-                <div class="col-4">
+                <div class="col-6">
                     <div class="align-self-end float-end">
-                        <a href="{{ url('/') }}" type="button" class="btn btn-warning" style="pointer-events: none; cursor: default;">Next Page</a>
+                         <button type="submit" onclick="handleSubmit()" class="btn btn-primary">Calculate Score</button> 
                     </div>
                 </div>
             </div>
