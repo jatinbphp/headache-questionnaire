@@ -64,10 +64,9 @@ class QuestionnairController extends Controller
         $questionData['que17']  = 'Is the head ache associated with any of the following: Uncontrollable jerking movements of the arms and legs,  Loss of consciousness or awareness or Cognitive or emotional symptoms, such as fear, anxiety or deja vu..';
         $questionData['que18']  = 'Is the head ache assosiceted with any of the following: Muscle tremors or uncontrolable muscle movements, srange sensation, numbness or ';
         $questionData['que19']  = 'Have you experienced a change in personality lately, e.g. more or less aggressive than normal, or difficulty with memmory?';
-        Mail::send('survey_results', [ 'postData'=> $postData,'questionData'=>$questionData,'score'=>$score ], function ($message) {
-            $message->from('info@admin.com', 'Headache');
-            $message->to("gert@gsdm.co.za")->subject('New Form Submitted: '.date("Y-m-d"));
-        }); 
+        
+        /*send mail to the admin*/
+        //$this->sendMail($postData, $questionData, $score);
 
         /*add user information into the session*/
         $this->setUserSession($request->all());
@@ -91,5 +90,12 @@ class QuestionnairController extends Controller
         ];
 
         Session::put('user', $user);
+    }
+
+    private function sendMail($postData, $questionData, $score){
+        Mail::send('survey_results', [ 'postData'=> $postData,'questionData'=>$questionData,'score'=>$score ], function ($message) {
+            $message->from('info@admin.com', 'Headache');
+            $message->to("gert@gsdm.co.za")->subject('New Form Submitted: '.date("Y-m-d"));
+        }); 
     }
 }
