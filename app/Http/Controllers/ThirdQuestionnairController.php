@@ -33,7 +33,7 @@ class ThirdQuestionnairController extends Controller{
             Session::forget('score');
         }
 
-        /*question -1*/
+        /*Question 1: What triggered or triggers your head ache?*/
         $question_1 = [
             'trauma'                                => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             'brain_heamorrhage'                     => ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -47,7 +47,7 @@ class ThirdQuestionnairController extends Controller{
         $question_1_data = isset($question_1[$request->question_1]) ? $question_1[$request->question_1] : null;
         $this->setScore($question_1_data);
 
-        /*question -2*/
+        /*Question 2: How long does it take from when you become aware of the head ache, until it is at its worst?*/
         $question_2 = [
             'hyper_acute_in_minutes' => ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             'acute_within_an_hour'   => ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 1, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -57,7 +57,7 @@ class ThirdQuestionnairController extends Controller{
         $question_2_data = isset($question_2[$request->question_2]) ? $question_2[$request->question_2] : null;
         $this->setScore($question_2_data);
 
-        /*question -3*/
+        /*Question 3: During a typical 24 hour period, when is the head ache most likely to occur?*/
         $question_3 = [
             'in_morning'         => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             'at_night_nocturnal' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -68,7 +68,7 @@ class ThirdQuestionnairController extends Controller{
         $question_3_data = isset($question_3[$request->question_3]) ? $question_3[$request->question_3] : null;
         $this->setScore($question_3_data);
 
-        /*question -4*/
+        /*Question 4: How old were you when the head ache started?*/
         $question_4 = [
             'between_2_and_99_years' => ['a' => 1, 'b' => 1, 'c' => 1, 'd' => 0, 'e' => 1, 'f' => 1, 'g' => 1, 'h' => 1, 'i' => 0, 'j' => 1, 'k' => 1, 'l' => 1, 'm' => 1, 'n' => 1, 'o' => 1, 'p' => 1, 'q' => 1, 'r' => 1],
             'midlife'                => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -77,7 +77,7 @@ class ThirdQuestionnairController extends Controller{
         $question_4_data = isset($question_4[$request->question_4]) ? $question_4[$request->question_4] : null;
         $this->setScore($question_4_data);
 
-        /*question -5*/
+        /*Question 5: Where on your head is the head ache?*/
         $question_5 = [
             'neck'                      => ['a' => 0, 'b' => 1, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 1, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             'face'                      => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -90,7 +90,7 @@ class ThirdQuestionnairController extends Controller{
         $question_5_data = isset($question_5[$request->question_5]) ? $question_5[$request->question_5] : null;
         $this->setScore($question_5_data);
 
-        /*question -6*/
+        /*Question 6: On which side of the head is the head ache?*/
         $question_6 = [
             'both_sides_bilataral'               => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 1, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             'only_left_or_right_side_unilateral' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 1, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 1, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -98,7 +98,7 @@ class ThirdQuestionnairController extends Controller{
         $question_6_data = isset($question_6[$request->question_6]) ? $question_6[$request->question_6] : null;
         $this->setScore($question_6_data);
 
-        /*question -7*/
+        /*Question 7: Which describe your head ache the best?*/
         $question_7 = [
             'platonic'      => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             'progressive'   => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -106,7 +106,7 @@ class ThirdQuestionnairController extends Controller{
         $question_7_data = isset($question_7[$request->question_7]) ? $question_7[$request->question_7] : null;
         $this->setScore($question_7_data);
 
-        /*question -8*/
+        /*Question 8: which describe your head ache the best?*/
         $question_8 = [
             'constant'      => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 1, 'k' => 0, 'l' => 0, 'm' => 1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             'intermittant'  => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 1, 'k' => 0, 'l' => 0, 'm' => 1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -114,7 +114,7 @@ class ThirdQuestionnairController extends Controller{
         $question_8_data = isset($question_8[$request->question_8]) ? $question_8[$request->question_8] : null;
         $this->setScore($question_8_data);
 
-        /*question -9*/
+        /*Question 9: How severe is the pain?*/
         $question_9 = [
             'mild_head_ache' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 1, 'p' => 0, 'q' => 0, 'r' => 0],
             'severe_pain'    => ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 1, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -122,7 +122,7 @@ class ThirdQuestionnairController extends Controller{
         $question_9_data = isset($question_9[$request->question_9]) ? $question_9[$request->question_9] : null;
         $this->setScore($question_9_data);
 
-        /*question -10*/
+        /*Question 10: Which one describes the character of the pain most accurately?*/
         $question_10 = [
             'pulsatile_throbing' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             'oppressive'         => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 1, 'q' => 0, 'r' => 0],
@@ -131,7 +131,7 @@ class ThirdQuestionnairController extends Controller{
         $question_10_data = isset($question_10[$request->question_10]) ? $question_10[$request->question_10] : null;
         $this->setScore($question_10_data);
 
-        /*question -11*/
+        /*question -11 Poor Memmory*/
         $poor_memmory = [
             '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             '1' => ['a' => 1, 'b' => 1, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -139,6 +139,7 @@ class ThirdQuestionnairController extends Controller{
         $poor_memmory_data = isset($poor_memmory[$request->poor_memmory]) ? $poor_memmory[$request->poor_memmory] : null;
         $this->setScore($poor_memmory_data);
 
+        /*Focal Neuro signs. Loss of movement, loss of sensation, hemineglect etc, speech difficulties*/
         $focal_neuro_signs = [
             '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             '1' => ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -146,6 +147,7 @@ class ThirdQuestionnairController extends Controller{
         $focal_neuro_signs_data = isset($focal_neuro_signs[$request->focal_neuro_signs]) ? $focal_neuro_signs[$request->focal_neuro_signs] : null;
         $this->setScore($focal_neuro_signs_data);
 
+        /*Poor Concentration*/
         $poor_concentration = [
             '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             '1' => ['a' => 1, 'b' => 1, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -153,6 +155,7 @@ class ThirdQuestionnairController extends Controller{
         $poor_concentration_data = isset($poor_concentration[$request->poor_concentration]) ? $poor_concentration[$request->poor_concentration] : null;
         $this->setScore($poor_concentration_data);
 
+        /*Irritability*/
         $irritability = [
             '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             '1' => ['a' => 1, 'b' => 1, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -160,6 +163,7 @@ class ThirdQuestionnairController extends Controller{
         $irritability_data = isset($irritability[$request->irritability]) ? $irritability[$request->irritability] : null;
         $this->setScore($irritability_data);
 
+        /*Emotional Lability*/
         $emotional_lability = [
             '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             '1' => ['a' => 1, 'b' => 1, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -167,6 +171,7 @@ class ThirdQuestionnairController extends Controller{
         $emotional_lability_data = isset($emotional_lability[$request->emotional_lability]) ? $emotional_lability[$request->emotional_lability] : null;
         $this->setScore($emotional_lability_data);
 
+        /*Poor sight*/
         $poor_sight = [
             '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 1, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -174,6 +179,7 @@ class ThirdQuestionnairController extends Controller{
         $poor_sight_data = isset($poor_sight[$request->poor_sight]) ? $poor_sight[$request->poor_sight] : null;
         $this->setScore($poor_sight_data);
 
+        /*Squinting*/
         $squinting = [
             '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 1, 'm' => 1, 'n' => 0, 'o' => 1, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -181,6 +187,7 @@ class ThirdQuestionnairController extends Controller{
         $squinting_data = isset($squinting[$request->squinting]) ? $squinting[$request->squinting] : null;
         $this->setScore($squinting_data);
 
+        /*Insomnia*/
         $insomnia = [
             '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             '1' => ['a' => 1, 'b' => 1, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -188,6 +195,7 @@ class ThirdQuestionnairController extends Controller{
         $insomnia_data = isset($insomnia[$request->insomnia]) ? $insomnia[$request->insomnia] : null;
         $this->setScore($insomnia_data);
 
+        /*Equilibrium desturbance*/
         $equilibrium_desturbance = [
             '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
             '1' => ['a' => 1, 'b' => 1, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0],
@@ -529,7 +537,7 @@ class ThirdQuestionnairController extends Controller{
             'Pseudotumor Cerebri/Idiopathic Intracanial Hypertention'   => isset(Session::get('score')['g']) ? Session::get('score')['g'] : null,
             'LOW Serebrospinal Fluid Pressure'                          => isset(Session::get('score')['h']) ? Session::get('score')['h'] : null,
             'Sleep Apnea Syndrome'                                      => isset(Session::get('score')['i']) ? Session::get('score')['i'] : null,
-            '2ndary Cervicogenig Head Ache due to trauma, tumors, lesions in C 2 and 2'  => isset(Session::get('score')['j']) ? Session::get('score')['j'] : null,
+            'Cervicogenig Head Ache due to trauma, tumors and lesions ' => isset(Session::get('score')['j']) ? Session::get('score')['j'] : null,
             'Retropharyngial Tendonitis (rare)'                         => isset(Session::get('score')['k']) ? Session::get('score')['k'] : null,
             'Focal Cervical Dystonia'                                   => isset(Session::get('score')['l']) ? Session::get('score')['l'] : null,
             'Glaucoma'                                                  => isset(Session::get('score')['m']) ? Session::get('score')['m'] : null,
