@@ -105,29 +105,29 @@
 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="past_medical_or_psychiatric_disease" value="1"> Yes
-                                                        <input type="radio" name="past_medical_or_psychiatric_disease" value="0" checked> No  
+                                                        <input type="radio" name="past_medical" value="1"> Yes
+                                                        <input type="radio" name="past_medical" value="0" checked> No  
                                                     </td>
                                                 </tr>
 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="trauma_to_the_head_neck_face" value="1"> Yes
-                                                        <input type="radio" name="trauma_to_the_head_neck_face" value="0" checked> No  
+                                                        <input type="radio" name="trauma" value="1"> Yes
+                                                        <input type="radio" name="trauma" value="0" checked> No  
                                                     </td>
                                                 </tr>
 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="substance_abuce_inc_coffee_tobacco_drugs_analgesics" value="1"> Yes
-                                                        <input type="radio" name="substance_abuce_inc_coffee_tobacco_drugs_analgesics" value="0" checked> No  
+                                                        <input type="radio" name="substance_abuce" value="1"> Yes
+                                                        <input type="radio" name="substance_abuce" value="0" checked> No  
                                                     </td>
                                                 </tr>
 
                                                 <tr style="height: 40px;">
                                                     <td>
-                                                        <input type="radio" name="physically_or_emotional_stresfull_surcumstance" value="1"> Yes
-                                                        <input type="radio" name="physically_or_emotional_stresfull_surcumstance" value="0" checked> No  
+                                                        <input type="radio" name="stresfull_surcumstance" value="1"> Yes
+                                                        <input type="radio" name="stresfull_surcumstance" value="0" checked> No  
                                                     </td>
                                                 </tr>
                                                 
@@ -243,13 +243,13 @@
                                                         <div class="form-group">
                                                             <select class="form-control" id="question_3_a" name="question_3_a">
                                                                 <option value="" selected disabled>Choose one</option>
-                                                                <option value="forehead_anterior">Forehead (Anterior)</option>
-                                                                <option value="back_of_the_head_posterior">Back of the head (Posterior)</option>
+                                                                <option value="anterior">Forehead (Anterior)</option>
+                                                                <option value="posterior">Back of the head (Posterior)</option>
                                                                 <option value="all_over">all over</option>
-                                                                <option value="top_and_middle_of_the_head_above_the_ear_parietal">Top and middle of the head, above the ear? (Parietal)</option>
-                                                                <option value="right_at_the_back_at_the_notch_of_the_head_occipital_nuchal">Right at the back at the notch of the head(Occipital Nuchal )</option>
-                                                                <option value="on_the_side_and_temple_of_the_head_temporal">On the side and temple of the head? (Temporal)</option>
-                                                                <option value="from_the_back_of_the_head_to_behind_the_eyes_oculo_temporal_occipital">From the back of the head, to behind the eyes? (Oculo-temporal-occipital)</option>
+                                                                <option value="parietal">Top and middle of the head, above the ear? (Parietal)</option>
+                                                                <option value="occipital_nuchal">Right at the back at the notch of the head(Occipital Nuchal )</option>
+                                                                <option value="temporal">On the side and temple of the head? (Temporal)</option>
+                                                                <option value="oculo_temporal_occipital">From the back of the head, to behind the eyes? (Oculo-temporal-occipital)</option>
                                                             </select>
                                                         </div>
                                                     </td>
@@ -301,14 +301,14 @@
                                                         <div class="form-group">
                                                             <select class="form-control" name="question_3_b" id="question_3_b">
                                                                 <option value="" selected disabled>Choose one</option>
-                                                                <option value="back_of_the_head_occipital">Back of the head (Occipital)</option>
+                                                                <option value="occipital">Back of the head (Occipital)</option>
                                                                 <option value="cheek_face_chin">Cheek, face or chin</option>
                                                                 <option value="behind_ear">Behind Ear</option>
-                                                                <option value="base_of_tongue_tonsillar_fossae">Base of tongue/Tonsillar Fossae</option>
-                                                                <option value="behind_the_eyes_periorbital">Behind the eyes (Periorbital)</option>
-                                                                <option value="right_at_the_back_notch_of_the_head_occipital_nuchal">Right at the back notch of the head (Occipital/Nuchal)</option>
-                                                                <option value="at_the_temple_temporal">At the Temple (Temporal)</option>
-                                                                <option value="at_the_temple_and_behind_the_eye_oculofronto_temporal">At the temple and behind the eye (Oculo-fronto Temporal)</option>
+                                                                <option value="base_of_tongue">Base of tongue/Tonsillar Fossae</option>
+                                                                <option value="periorbital">Behind the eyes (Periorbital)</option>
+                                                                <option value="occipital_nuchal">Right at the back notch of the head (Occipital/Nuchal)</option>
+                                                                <option value="temporal">At the Temple (Temporal)</option>
+                                                                <option value="oculofronto_temporal">At the temple and behind the eye (Oculo-fronto Temporal)</option>
                                                             </select>
                                                         </div>
                                                     </td>
@@ -361,10 +361,10 @@
                                                         <div class="form-group">
                                                             <select class="form-control" name="question_4" id="question_4">
                                                                 <option value="" selected disabled>Choose one</option>
-                                                                <option value="mostly_on_one_side">Mostly on one side (Unilateral)</option>
-                                                                <option value="both_sides">Both sides (Bilateral)</option>
-                                                                <option value="always_at_the_same_side_laterally_fixed">Always at the same side (Laterally Fixed)</option>
-                                                                <option value="both_sides_but_one_side_is_worse_latirality_concommitant">Both sides but one side is worse (Latirality Concommitant)</option>
+                                                                <option value="unilateral">Mostly on one side (Unilateral)</option>
+                                                                <option value="bilateral">Both sides (Bilateral)</option>
+                                                                <option value="laterally_fixed">Always at the same side (Laterally Fixed)</option>
+                                                                <option value="latirality_concommitant">Both sides but one side is worse (Latirality Concommitant)</option>
                                                             </select>
                                                         </div>
                                                     </td>
@@ -406,11 +406,11 @@
                                                             <select class="form-control" name="question_5" id="question_5">
                                                                 <option value="" selected disabled>Choose one</option>
                                                                 <option value="1_second">1 second</option>
-                                                                <option value="10_seconds_followed_by_refractory_period">10 seconds followed by refractory period</option>
-                                                                <option value="15_minutes_to_3_hours">15 minutes to 3 hours</option>
-                                                                <option value="more_than_30_minutes_but_less_than_4_hours">More than 30 minutes but less than 4 hours</option>
-                                                                <option value="4_hours_to_more_or_less_24_hours">4 hours to more or less 24 hours</option>
-                                                                <option value="much_longer_than_24_hours">Much longer than 24 hours</option>
+                                                                <option value="10_seconds">10 seconds followed by refractory period</option>
+                                                                <option value="15_minutes">15 minutes to 3 hours</option>
+                                                                <option value="30_minutes">More than 30 minutes but less than 4 hours</option>
+                                                                <option value="4_hours">4 hours to more or less 24 hours</option>
+                                                                <option value="24_hours">Much longer than 24 hours</option>
                                                                 <option value="comes_and_goes">Comes and goes</option>
                                                                 <option value="persistent">Persistent</option>
                                                             </select>
@@ -462,10 +462,10 @@
                                                         <div class="form-group">
                                                             <select class="form-control" name="question_6" id="question_6">
                                                                 <option value="" selected disabled>Choose one</option>
-                                                                <option value="mild_0_3_on_visual_analogue_scale">Mild (0-3 on Visual Analogue Scale)</option>
-                                                                <option value="moderate_4_6_on_visual_analogue_scale">Moderate (4-6 on Visual Analogue Scale)</option>
-                                                                <option value="severe_7_9_on_visual_analogue_scale">Severe (7-9 on Visual Analogue Scale)</option>
-                                                                <option value="excruciating_10_on_visual_analogue_scale">Excruciating (10 on Visual Analogue Scale)</option>
+                                                                <option value="mild">Mild (0-3 on Visual Analogue Scale)</option>
+                                                                <option value="moderate">Moderate (4-6 on Visual Analogue Scale)</option>
+                                                                <option value="severe">Severe (7-9 on Visual Analogue Scale)</option>
+                                                                <option value="exrutiating">Excruciating (10 on Visual Analogue Scale)</option>
                                                             </select>
                                                         </div>
                                                     </td>
@@ -514,10 +514,10 @@
                                                         <div class="form-group">
                                                             <select class="form-control" name="question_7" id="question_7">
                                                                 <option value="" selected disabled>Choose one</option>
-                                                                <option value="the_pain_develops_within_a_minute_or_can_even_feel_like_an_explosion_of_pain_hyper_accute_or_explosive">The pain develops within a minute or can even feel like an explosion of pain (Hyper-acute or Explosive)</option>
-                                                                <option value="quick_progression_accute">Quick progression (Acute)</option>
-                                                                <option value="fast_progression_e_g_about_an_hour_or_two">Fast progression, e.g., about an hour or two</option>
-                                                                <option value="it_takes_long_e_g_several_hours_slow_progression">It takes long, e.g., several hours (Slow Progression)</option>
+                                                                <option value="explosive">The pain develops within a minute or can even feel like an explosion of pain (Hyper-acute or Explosive)</option>
+                                                                <option value="accute">Quick progression (Acute)</option>
+                                                                <option value="fast_progression">Fast progression, e.g., about an hour or two</option>
+                                                                <option value="slow_progression">It takes long, e.g., several hours (Slow Progression)</option>
                                                             </select>
                                                         </div>
                                                     </td>
@@ -558,12 +558,12 @@
                                                         <div class="form-group">
                                                             <select class="form-control" name="question_8" id="question_8">
                                                                 <option value="" selected disabled>Choose one</option>
-                                                                <option value="boring_pain_like_a_drill">Boring pain, like a drill</option>
-                                                                <option value="throbing_pain_pulsing_pain">Throbing pain/Pulsing Pain</option>
+                                                                <option value="boring_pain_">Boring pain, like a drill</option>
+                                                                <option value="throbing_pain">Throbing pain/Pulsing Pain</option>
                                                                 <option value="pressing_pain">Pressing Pain.</option>
                                                                 <option value="needle_like_pain">Needle like Pain</option>
                                                                 <option value="electric_shock_pain">Electric shock pain</option>
-                                                                <option value="very_unplessant_feeling_of_eyes_being_pushed_out">Very Unplessant feeling of eyes being pushed out</option>
+                                                                <option value="unplessant_feeling">Very Unplessant feeling of eyes being pushed out</option>
                                                             </select>
                                                         </div>
                                                     </td>
@@ -604,8 +604,8 @@
                                                             <tbody>
                                                                 <tr style="height: 80px;">
                                                                     <td>
-                                                                        <input type="radio" value="1" name="red_eyes_crying_eyes_and_or_runny_nose"> Yes
-                                                                        <input type="radio" value="0" name="red_eyes_crying_eyes_and_or_runny_nose" checked> No  
+                                                                        <input type="radio" value="1" name="runny_nose"> Yes
+                                                                        <input type="radio" value="0" name="runny_nose" checked> No  
                                                                     </td>
                                                                 </tr>
 
@@ -618,15 +618,15 @@
 
                                                                 <tr style="height: 60px;">
                                                                     <td>
-                                                                        <input type="radio" value="1" name="you_want_to_avoid_bright_light_or_loud_sounds"> Yes
-                                                                        <input type="radio" value="0" name="you_want_to_avoid_bright_light_or_loud_sounds" checked> No  
+                                                                        <input type="radio" value="1" name="photophobia"> Yes
+                                                                        <input type="radio" value="0" name="photophobia" checked> No  
                                                                     </td>
                                                                 </tr>
 
                                                                 <tr style="height: 60px;">
                                                                     <td>
-                                                                        <input type="radio" value="1" name="visual_signs_body_parts_becoming_paraletic"> Yes
-                                                                        <input type="radio" value="0" name="visual_signs_body_parts_becoming_paraletic" checked> No  
+                                                                        <input type="radio" value="1" name="paraletic"> Yes
+                                                                        <input type="radio" value="0" name="paraletic" checked> No  
                                                                     </td>
                                                                 </tr>
 
@@ -646,15 +646,15 @@
 
                                                                 <tr style="height: 40px;">
                                                                     <td>
-                                                                        <input type="radio" value="1" name="large_pupils_and_or_eyelid_hanging"> Yes
-                                                                        <input type="radio" value="0" name="large_pupils_and_or_eyelid_hanging" checked> No  
+                                                                        <input type="radio" value="1" name="large_pupils"> Yes
+                                                                        <input type="radio" value="0" name="large_pupils" checked> No  
                                                                     </td>
                                                                 </tr>
 
                                                                 <tr style="height: 40px;">
                                                                     <td>
-                                                                        <input type="radio" value="1" name="restlessness_and_irritation"> Yes
-                                                                        <input type="radio" value="0" name="restlessness_and_irritation" checked> No  
+                                                                        <input type="radio" value="1" name="restlessness"> Yes
+                                                                        <input type="radio" value="0" name="restlessness" checked> No  
                                                                     </td>
                                                                 </tr>
 
@@ -667,8 +667,8 @@
 
                                                                 <tr style="height: 40px;">
                                                                     <td>
-                                                                        <input type="radio" value="1" name="tenderness_of_the_scalp"> Yes
-                                                                        <input type="radio" value="0" name="tenderness_of_the_scalp" checked> No  
+                                                                        <input type="radio" value="1" name="pericranial_tenderness"> Yes
+                                                                        <input type="radio" value="0" name="pericranial_tenderness" checked> No  
                                                                     </td>
                                                                 </tr>
 
@@ -729,8 +729,8 @@
                                                             <tbody>
                                                                 <tr style="height: 40px;">
                                                                     <td>
-                                                                        <input type="radio" value="1" name="normal_physical_activity"> Yes
-                                                                        <input type="radio" value="0" name="normal_physical_activity" checked> No  
+                                                                        <input type="radio" value="1" name="physical_activity"> Yes
+                                                                        <input type="radio" value="0" name="physical_activity" checked> No  
                                                                     </td>
                                                                 </tr>
 
@@ -841,8 +841,8 @@
 
                                                                 <tr style="height: 40px;">
                                                                     <td>
-                                                                        <input type="radio" value="1" name="persistant_ackward_neck_position_e_g_reading_or_sleeping"> Yes
-                                                                        <input type="radio" value="0" name="persistant_ackward_neck_position_e_g_reading_or_sleeping" checked> No  
+                                                                        <input type="radio" value="1" name="persistent_awkward"> Yes
+                                                                        <input type="radio" value="0" name="persistent_awkward" checked> No  
                                                                     </td>
                                                                 </tr>
 
@@ -925,9 +925,9 @@
                                                         <div class="form-group">
                                                             <select class="form-control" name="question_11" id="question_11">
                                                                 <option value="" selected disabled>Choose one</option>
-                                                                <option value="the_head_ache_awokes_me_from_sleep">The Head Ache Awokes me from sleep</option>
-                                                                <option value="early_morning_when_i_am_sleeping">The head ache comes during night or early morning when I am sleeping (Nocturnal or early morning onset)</option>
-                                                                <option value="the_head_aches_is_coming_during_daytime">The Head Aches is coming during Daytime</option>
+                                                                <option value="from_sleep">The Head Ache Awokes me from sleep</option>
+                                                                <option value="when_sleeping">The head ache comes during night or early morning when I am sleeping (Nocturnal or early morning onset)</option>
+                                                                <option value="during_daytime">The Head Aches is coming during Daytime</option>
                                                             </select>
                                                         </div>
                                                     </td>
@@ -973,9 +973,9 @@
                                                         <div class="form-group">
                                                             <select class="form-control" name="question_12" id="question_12">
                                                                 <option value="" selected disabled>Choose one</option>
-                                                                <option value="not_that_often_low">Not that often (low)</option>
-                                                                <option value="sometimes_moderate">Sometimes (moderate)</option>
-                                                                <option value="the_whole_time_high">The whole time (high)</option>
+                                                                <option value="low">Not that often (low)</option>
+                                                                <option value="moderate">Sometimes (moderate)</option>
+                                                                <option value="high">The whole time (high)</option>
                                                             </select>
                                                         </div>
                                                     </td>

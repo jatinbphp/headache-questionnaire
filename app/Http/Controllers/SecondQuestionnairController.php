@@ -36,563 +36,459 @@ class SecondQuestionnairController extends Controller{
 
         if(Session::has('score')){
             Session::forget('score');
-        }    
-
-        /*question 1 A*/
-        if($request->family_history_of_h_a == 1){
-            $values = ['a' => 1, 'b' => 1, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->family_history_of_h_a == 0){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
         }
 
-        /*question 1 B*/
-        if($request->past_medical_or_psychiatric_disease == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        } elseif($request->past_medical_or_psychiatric_disease == 0) {
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }
+        /*Family History of H/A*/
+        $family_history_of_h_a = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 1, 'b' => 1, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
 
-        /*question 1 C*/
-        if($request->trauma_to_the_head_neck_face == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        } elseif($request->trauma_to_the_head_neck_face == 0) {
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }
+        $family_history_of_h_a_data = isset($family_history_of_h_a[$request->family_history_of_h_a]) ? $family_history_of_h_a[$request->family_history_of_h_a] : null;
+        $this->setScore($family_history_of_h_a_data);
 
-        /*question 1 D*/
-        if($request->substance_abuce_inc_coffee_tobacco_drugs_analgesics == 1){
-            $values = ['a' => 1, 'b' => 1, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        } elseif($request->substance_abuce_inc_coffee_tobacco_drugs_analgesics == 0) {
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }
+        /*Past medical or psychiatric disease*/
+        $past_medical = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
 
-        /*question 1 E*/
-        if($request->physically_or_emotional_stresfull_surcumstance == 1){
-            $values = ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        } elseif($request->physically_or_emotional_stresfull_surcumstance == 0) {
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }
+        $past_medical_data = isset($past_medical[$request->past_medical]) ? $past_medical[$request->past_medical] : null;
+        $this->setScore($past_medical_data);
 
-        /*question 2*/
-        if($request->question_2 == 'childhood'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_2 == 'adolescence'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_2 == 'in_my_20_s'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_2 == 'in_my_30_s'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_2 == 'in_my_40_s'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_2 == 'in_my_50_s'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_2 == 'in_and_after_my_60_s'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }
+        /*Trauma to the head/Neck/face*/
+        $trauma = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
 
-        /*question 3 a generalized*/
+        $trauma_data = isset($trauma[$request->trauma]) ? $trauma[$request->trauma] : null;
+        $this->setScore($trauma_data);
+
+        /*Substance abuce inc. Coffee, tobacco, Drugs, Analgesics*/
+        $substance_abuce = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 1, 'b' => 1, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $substance_abuce_data = isset($substance_abuce[$request->substance_abuce]) ? $substance_abuce[$request->substance_abuce] : null;
+        $this->setScore($substance_abuce_data);
+
+        /*Physically or Emotional stresfull surcumstance*/
+        $stresfull_surcumstance = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $stresfull_surcumstance_data = isset($stresfull_surcumstance[$request->stresfull_surcumstance]) ? $stresfull_surcumstance[$request->stresfull_surcumstance] : null;
+        $this->setScore($stresfull_surcumstance_data);
+
+        /*Question 2: At what age did your head ache start*/
+        $question_2 = [
+            'childhood'             => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'adolescence'           => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'in_my_20_s'            => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'in_my_30_s'            => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'in_my_40_s'            => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'in_my_50_s'            => ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'in_and_after_my_60_s'  => ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $question_2_data = isset($question_2[$request->question_2]) ? $question_2[$request->question_2] : null;
+        $this->setScore($question_2_data);
+
+        /*Generalized*/
         if($request->question_three_options == 'generalized'){
-            if($request->question_3_a == 'forehead_anterior'){
-                $values = ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values); 
-            }elseif($request->question_3_a == 'back_of_the_head_posterior'){
-                $values = ['a' => 1, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values); 
-            }elseif($request->question_3_a == 'all_over'){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values); 
-            }elseif($request->question_3_a == 'top_and_middle_of_the_head_above_the_ear_parietal'){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values); 
-            }elseif($request->question_3_a == 'right_at_the_back_at_the_notch_of_the_head_occipital_nuchal'){
-                $values = ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values); 
-            }elseif($request->question_3_a == 'on_the_side_and_temple_of_the_head_temporal'){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values); 
-            }elseif($request->question_3_a == 'from_the_back_of_the_head_to_behind_the_eyes_oculo_temporal_occipital'){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values); 
-            }
+            $question_3_a = [
+                'anterior'                 => ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+                'posterior'                => ['a' => 1, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+                'all_over'                 => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+                'parietal'                 => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+                'occipital_nuchal'         => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+                'temporal'                 => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+                'oculo_temporal_occipital' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            ];
+
+            $question_3_a_data = isset($question_3_a[$request->question_3_a]) ? $question_3_a[$request->question_3_a] : null;
+            $this->setScore($question_3_a_data);
         }
 
-        /*question 3 b*/
+        /*Specific*/
         if($request->question_three_options == 'specific'){
-            if($request->question_3_b == 'back_of_the_head_occipital'){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 1, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }elseif($request->question_3_b == 'cheek_face_chin'){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 0, 'k' =>-1, 'l' =>-1, 'm' => 1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }elseif($request->question_3_b == 'behind_ear'){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 1, 'k' => 0, 'l' =>-1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }elseif($request->question_3_b == 'base_of_tongue_tonsillar_fossae'){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 1, 'k' =>-1, 'l' =>-1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }elseif($request->question_3_b == 'behind_the_eyes_periorbital'){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }elseif($request->question_3_b == 'right_at_the_back_notch_of_the_head_occipital_nuchal'){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }elseif($request->question_3_b == 'at_the_temple_temporal'){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' =>-1, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }elseif($request->question_3_b == 'at_the_temple_and_behind_the_eye_oculofronto_temporal'){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
+            $question_3_b = [
+                'occipital'            => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 1, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+                'cheek_face_chin'      => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 0, 'k' =>-1, 'l' =>-1, 'm' => 1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+                'behind_ear'           => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 1, 'k' => 0, 'l' =>-1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+                'base_of_tongue'       => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 1, 'k' =>-1, 'l' =>-1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+                'periorbital'          => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+                'occipital_nuchal'     => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+                'temporal'             => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' =>-1, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+                'oculofronto_temporal' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            ];
+
+            $question_3_b_data = isset($question_3_b[$request->question_3_b]) ? $question_3_b[$request->question_3_b] : null;
+            $this->setScore($question_3_b_data);
         }
 
-        /*question 4*/
-        if($request->question_4 == 'mostly_on_one_side'){
-            $values = ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' =>-1, 'g' =>-1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' =>-1, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_4 == 'both_sides'){
-            $values = ['a' =>-1, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 1, 'f' =>-1, 'g' =>-1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' =>-1, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_4 == 'always_at_the_same_side_laterally_fixed'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 1, 'e' =>-1, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 1, 'j' => 1, 'k' => 0, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_4 == 'both_sides_but_one_side_is_worse_latirality_concommitant'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => -1, 'g' =>-1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' =>-1, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }
+        /*Question 4: On which side of the head is the head ache*/
+        $question_4 = [
+            'unilateral'                => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' =>-1, 'g' =>-1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' =>-1, 'r' => 0, 's' => 0, 't' => 0],
+            'bilateral'                 => ['a' =>-1, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 1, 'f' =>-1, 'g' =>-1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' =>-1, 'r' => 0, 's' => 0, 't' => 0],
+            'laterally_fixed'           => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 1, 'e' =>-1, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 1, 'j' => 1, 'k' => 0, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 0, 's' => 0, 't' => 0],
+            'latirality_concommitant'   => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' =>-1, 'g' =>-1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' =>-1, 'r' => 0, 's' => 0, 't' => 0],
+        ];
 
-        /*question 5*/
-        if($request->question_5 == '1_second'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_5 == '10_seconds_followed_by_refractory_period'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 1, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_5 == '15_minutes_to_3_hours'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' =>-1, 'l' => 0, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_5 == 'more_than_30_minutes_but_less_than_4_hours'){
-            $values = ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 1, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 1, 'j' => 0, 'k' =>-1, 'l' => 0, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 1, 'q' => 0, 'r' => 0, 's' => 1, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_5 == '4_hours_to_more_or_less_24_hours'){
-            $values = ['a' => 1, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 1, 'f' =>-1, 'g' =>-1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 1, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_5 == 'much_longer_than_24_hours'){
-            $values = ['a' => 1, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 1, 'f' =>-1, 'g' =>-1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 1, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_5 == 'comes_and_goes'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_5 == 'persistent'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }
+        $question_4_data = isset($question_4[$request->question_4]) ? $question_4[$request->question_4] : null;
+        $this->setScore($question_4_data);
 
-        /*question_6*/
-        if($request->question_6 == 'mild_0_3_on_visual_analogue_scale'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->question_6 == 'moderate_4_6_on_visual_analogue_scale'){
-            $values = ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 1, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->question_6 == 'severe_7_9_on_visual_analogue_scale'){
-            $values = ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 1, 'm' => 1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->question_6 == 'excruciating_10_on_visual_analogue_scale'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 1, 't' => 0];
-            $this->setScore($values);
-        }
+        /*Question 5: How long does the pain last?*/
+        $question_5 = [
+            '1_second'          => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '10_seconds'        => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 1, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '15_minutes'        => ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' =>-1, 'l' => 0, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '30_minutes'        => ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 1, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 1, 'j' => 0, 'k' =>-1, 'l' => 0, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 1, 'q' => 0, 'r' => 0, 's' => 1, 't' => 0],
+            '4_hours'           => ['a' => 1, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 1, 'f' =>-1, 'g' =>-1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 1, 't' => 0],
+            '24_hours'          => ['a' => 1, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 1, 'f' =>-1, 'g' =>-1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 1, 't' => 0],
+            'comes_and_goes'    => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'persistent'        => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+        
+        $question_5_data = isset($question_5[$request->question_5]) ? $question_5[$request->question_5] : null;
+        $this->setScore($question_5_data);
 
-        /*question_7*/
-        if($request->question_7 == 'the_pain_develops_within_a_minute_or_can_even_feel_like_an_explosion_of_pain_hyper_accute_or_explosive'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 1, 'k' => 1, 'l' => 1, 'm' =>-1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 1, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->question_7 == 'quick_progression_accute'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' =>-1, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->question_7 == 'fast_progression_e_g_about_an_hour_or_two'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' =>-1, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->question_7 == 'it_takes_long_e_g_several_hours_slow_progression'){ 
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' =>-1, 't' => 0];
-            $this->setScore($values);
-        }
+        /*Question 6: How intesnse or hw much is the pain hurting*/
+        $question_6 = [
+            'mild'        => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'moderate'    => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 1, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'severe'      => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 1, 'm' => 1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'exrutiating' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 1, 't' => 0],
+        ];
 
-        /*question 8*/
-        if($request->question_8 == 'boring_pain_like_a_drill'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 1, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_8 == 'throbing_pain_pulsing_pain'){
-            $values = ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' =>-1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_8 == 'pressing_pain'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 1, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_8 == 'needle_like_pain'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_8 == 'electric_shock_pain'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' =>-1, 'g' =>-1, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }elseif($request->question_8 == 'very_unplessant_feeling_of_eyes_being_pushed_out'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' =>-1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values); 
-        }
+        $question_6_data = isset($question_6[$request->question_6]) ? $question_6[$request->question_6] : null;
+        $this->setScore($question_6_data);
 
-        /*question 9*/
-        if($request->red_eyes_crying_eyes_and_or_runny_nose == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->red_eyes_crying_eyes_and_or_runny_nose == 0){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }
+        /*Question 7: From when the pain is starting till it is on its worst, which statement is most accurate*/
+        $question_7 = [
+            'explosive'         => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 1, 'k' => 1, 'l' => 1, 'm' =>-1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 1, 't' => 0],
+            'accute'            => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' =>-1, 't' => 0],
+            'fast_progression'  => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' =>-1, 't' => 0],
+            'slow_progression'  => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' =>-1, 't' => 0],
+        ];
 
-        if($request->nausea_vomiting == 1){
-            $values = ['a' => 1, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' =>-1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->nausea_vomiting == 0){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }
+        $question_7_data = isset($question_7[$request->question_7]) ? $question_7[$request->question_7] : null;
+        $this->setScore($question_7_data);
 
-        if($request->you_want_to_avoid_bright_light_or_loud_sounds == 1){
-            $values = ['a' => 1, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->you_want_to_avoid_bright_light_or_loud_sounds == 0){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }
+        /*Question 8: Which statement describes the feeling of the pain the best*/
+        $question_8 = [
+            'boring_pain_'          => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 1, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'throbing_pain'         => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' =>-1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' =>-1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'pressing_pain'         => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 1, 's' => 0, 't' => 0],
+            'needle_like_pain'      => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 1, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'electric_shock_pain'   => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' =>-1, 'g' =>-1, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'unplessant_feeling'    => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' =>-1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
 
-        if($request->visual_signs_body_parts_becoming_paraletic == 1){
-            $values = ['a' => 1, 'b' => 0, 'c' => -1, 'd' => 0, 'e' => 0, 'f' =>-1, 'g' =>-1, 'h' =>-1, 'i' =>-1, 'j' =>-1, 'k' =>-1, 'l' =>-1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->visual_signs_body_parts_becoming_paraletic == 0){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }
+        $question_8_data = isset($question_8[$request->question_8]) ? $question_8[$request->question_8] : null;
+        $this->setScore($question_8_data);
 
-        if($request->numbness_of_toungue == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->numbness_of_toungue == 0){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }
+        /*Question 9: Are you experiencing any of the following at the same time of the head ache*/
+        $runny_nose = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 0, 's' => 0, 't' => 0],
+        ];
 
-        if($request->depression == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->depression == 0){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }
+        $runny_nose_data = isset($runny_nose[$request->runny_nose]) ? $runny_nose[$request->runny_nose] : null;
+        $this->setScore($runny_nose_data);
 
-        if($request->large_pupils_and_or_eyelid_hanging == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->large_pupils_and_or_eyelid_hanging == 0){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }
+        /*Nausea/Vomiting*/
+        $nausea_vomiting = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 1, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' =>-1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
 
-        if($request->restlessness_and_irritation == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->restlessness_and_irritation == 0){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }
+        $nausea_vomiting_data = isset($nausea_vomiting[$request->nausea_vomiting]) ? $nausea_vomiting[$request->nausea_vomiting] : null;
+        $this->setScore($nausea_vomiting_data);
 
-        if($request->other == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->other == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }
+        /*You want to avoid bright light or loud sounds (Photophobia, Phonophobia)*/
+        $photophobia = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 1, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 0, 's' => 0, 't' => 0],
+        ];
 
-        if($request->tenderness_of_the_scalp == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->tenderness_of_the_scalp == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }
+        $photophobia_data = isset($photophobia[$request->photophobia]) ? $photophobia[$request->photophobia] : null;
+        $this->setScore($photophobia_data);  
 
-        if($request->none == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->none == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        /*Visual Signs, Body parts becoming paraletic (Focal Neurological Phenomina: Aura, Paresthesia, aphasia)*/
+        $paraletic = [
+            '1' => ['a' => 1, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' =>-1, 'g' =>-1, 'h' =>-1, 'i' =>-1, 'j' =>-1, 'k' =>-1, 'l' =>-1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 0, 's' => 0, 't' => 0],
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
 
-        /*question 10 - normal physical activity*/
-        if($request->normal_physical_activity == 1){
-            $values = ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->normal_physical_activity == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $paraletic_data = isset($paraletic[$request->paraletic]) ? $paraletic[$request->paraletic] : null;
+        $this->setScore($paraletic_data);
 
-        /*question 10 -  menstrual stress*/
-        if($request->menstrual_stress == 1){
-            $values = ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->menstrual_stress == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        /*Numbness of toungue*/
+        $numbness_of_toungue = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
 
-        /*question 10 - whether changes*/
-        if($request->whether_changes == 1){
-            $values = ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->whether_changes == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $numbness_of_toungue_data = isset($numbness_of_toungue[$request->numbness_of_toungue]) ? $numbness_of_toungue[$request->numbness_of_toungue] : null;
+        $this->setScore($numbness_of_toungue_data);
 
-        /*question 10 - certain_food_or_drinks*/
-        if($request->certain_food_or_drinks == 1){
-            $values = ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->certain_food_or_drinks == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        /*Depression*/
+        $depression = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
 
-        /*question 10 - oversleeping*/
-        if($request->oversleeping == 1){
-            $values = ['a' => 1, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->oversleeping == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $depression_data = isset($depression[$request->depression]) ? $depression[$request->depression] : null;
+        $this->setScore($depression_data);
 
-        /*question 10 - under sleeping*/
-        if($request->under_sleeping == 1){
-            $values = ['a' => 1, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->under_sleeping == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        /*Large Pupils and/or Eyelid hanging (Miosis and/or Ptosis)*/
+        $large_pupils = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0], 
+            '1' => ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $large_pupils_data = isset($large_pupils[$request->large_pupils]) ? $large_pupils[$request->large_pupils] : null;
+        $this->setScore($large_pupils_data);
+
+        /*Restlessness and Irritation (agitation/irritation)*/
+        $restlessness = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $restlessness_data = isset($restlessness[$request->restlessness]) ? $restlessness[$request->restlessness] : null;
+        $this->setScore($restlessness_data);
+
+        /*Other*/
+        $other = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $other_data = isset($other[$request->other]) ? $other[$request->other] : null;
+        $this->setScore($other_data);
+
+        /*Tenderness of the Scalp (Pericranial Tenderness)*/
+        $pericranial_tenderness = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $pericranial_tenderness_data = isset($pericranial_tenderness[$request->pericranial_tenderness]) ? $pericranial_tenderness[$request->pericranial_tenderness] : null;
+        $this->setScore($pericranial_tenderness_data);
+
+        /*None*/
+        $none = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+       
+        $none_data = isset($none[$request->none]) ? $none[$request->none] : null;
+        $this->setScore($none_data);
+
+        /*Question 10: is any of the following activating the head ache, or making the head ache worse*/
+        $physical_activity = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $physical_activity_data = isset($physical_activity[$request->physical_activity]) ? $physical_activity[$request->physical_activity] : null;
+        $this->setScore($physical_activity_data);
+
+        /*Menstrual Stress*/
+        $menstrual_stress = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $menstrual_stress_data = isset($menstrual_stress[$request->menstrual_stress]) ? $menstrual_stress[$request->menstrual_stress] : null;
+        $this->setScore($menstrual_stress_data);
+
+        /*Whether changes*/
+        $whether_changes = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $whether_changes_data = isset($whether_changes[$request->whether_changes]) ? $whether_changes[$request->whether_changes] : null;
+        $this->setScore($whether_changes_data);
+
+        /*certain food or drinks*/
+        $certain_food_or_drinks = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $certain_food_or_drinks_data = isset($certain_food_or_drinks[$request->certain_food_or_drinks]) ? $certain_food_or_drinks[$request->certain_food_or_drinks] : null;
+        $this->setScore($certain_food_or_drinks_data);
+
+        /*Oversleeping*/
+        $oversleeping = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 1, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $oversleeping_data = isset($oversleeping[$request->oversleeping]) ? $oversleeping[$request->oversleeping] : null;
+        $this->setScore($oversleeping_data);
+
+        /*Under sleeping*/
+        $under_sleeping = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 1, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $under_sleeping_data = isset($under_sleeping[$request->under_sleeping]) ? $under_sleeping[$request->under_sleeping] : null;
+        $this->setScore($under_sleeping_data);
 
         /*question 10 - vasoactive_substance_e_g_alcohol*/
-        if($request->vasoactive_substance_e_g_alcohol == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->vasoactive_substance_e_g_alcohol == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $vasoactive_substance_e_g_alcohol = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 1, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $vasoactive_substance_e_g_alcohol_data = isset($vasoactive_substance_e_g_alcohol[$request->vasoactive_substance_e_g_alcohol]) ? $vasoactive_substance_e_g_alcohol[$request->vasoactive_substance_e_g_alcohol] : null;
+        $this->setScore($vasoactive_substance_e_g_alcohol_data);
 
         /*question 10 - neck_movements*/
-        if($request->neck_movements == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 1, 'e' => 0, 'f' => 0, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->neck_movements == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $neck_movements = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 1, 'e' => 0, 'f' => 0, 'g' => 1, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $neck_movements_data = isset($neck_movements[$request->neck_movements]) ? $neck_movements[$request->neck_movements] : null;
+        $this->setScore($neck_movements_data);
 
         /*question 10 - jaw_movements*/
-        if($request->jaw_movements == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 1, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->jaw_movements == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $jaw_movements = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 1, 'm' => 0, 'n' => 0, 'o' => 1, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $jaw_movements_data = isset($jaw_movements[$request->jaw_movements]) ? $jaw_movements[$request->jaw_movements] : null;
+        $this->setScore($jaw_movements_data);
 
         /*question 10 - pharingeal_activity_talking_swallowing*/
-        if($request->pharingeal_activity_talking_swallowing == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 1, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->pharingeal_activity_talking_swallowing == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $pharingeal_activity_talking_swallowing = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 1, 'j' => 1, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $pharingeal_activity_talking_swallowing_data = isset($pharingeal_activity_talking_swallowing[$request->pharingeal_activity_talking_swallowing]) ? $pharingeal_activity_talking_swallowing[$request->pharingeal_activity_talking_swallowing] : null;
+        $this->setScore($pharingeal_activity_talking_swallowing_data);
 
         /*question 10 - sex_and_exertion*/
-        if($request->sex_and_exertion == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 1, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->sex_and_exertion == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $sex_and_exertion = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 1, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $sex_and_exertion_data = isset($sex_and_exertion[$request->sex_and_exertion]) ? $sex_and_exertion[$request->sex_and_exertion] : null;
+        $this->setScore($sex_and_exertion_data);
 
         /*question 10 - cough*/
-        if($request->cough == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 1, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 1, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->cough == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $cough = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 1, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 1, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $cough_data = isset($cough[$request->cough]) ? $cough[$request->cough] : null;
+        $this->setScore($cough_data);
 
         /*question 10 - sudden_turn_of_head*/
-        if($request->sudden_turn_of_head == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->sudden_turn_of_head == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $sudden_turn_of_head = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $sudden_turn_of_head_data = isset($sudden_turn_of_head[$request->sudden_turn_of_head]) ? $sudden_turn_of_head[$request->sudden_turn_of_head] : null;
+        $this->setScore($sudden_turn_of_head_data);
 
         /*question 10 - strain*/
-        if($request->strain == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->strain == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $strain = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $strain_data = isset($strain[$request->strain]) ? $strain[$request->strain] : null;
+        $this->setScore($strain_data);
 
         /*question 10 - dental_procedure_or_minor_facial_trauma*/
-        if($request->dental_procedure_or_minor_facial_trauma == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->dental_procedure_or_minor_facial_trauma == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $dental_procedure_or_minor_facial_trauma = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 1, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $dental_procedure_or_minor_facial_trauma_data = isset($dental_procedure_or_minor_facial_trauma[$request->dental_procedure_or_minor_facial_trauma]) ? $dental_procedure_or_minor_facial_trauma[$request->dental_procedure_or_minor_facial_trauma] : null;
+        $this->setScore($dental_procedure_or_minor_facial_trauma_data);
 
         /*question 10 - standing_up*/
-        if($request->standing_up == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->standing_up == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $standing_up = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $standing_up_data = isset($standing_up[$request->standing_up]) ? $standing_up[$request->standing_up] : null;
+        $this->setScore($standing_up_data);
 
         /*question 10 - persistant_ackward_neck_position_e_g_reading_or_sleeping*/
-        if($request->persistant_ackward_neck_position_e_g_reading_or_sleeping == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->persistant_ackward_neck_position_e_g_reading_or_sleeping == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $persistent_awkward = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 1, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $persistent_awkward_data = isset($persistent_awkward[$request->persistent_awkward]) ? $persistent_awkward[$request->persistent_awkward] : null;
+        $this->setScore($persistent_awkward_data);
 
         /*question 10 - laying_down*/
-        if($request->laying_down == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->laying_down == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $laying_down = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $laying_down_data = isset($laying_down[$request->laying_down]) ? $laying_down[$request->laying_down] : null;
+        $this->setScore($laying_down_data);
 
         /*question 10 - worsened_by_head_movement*/
-        if($request->worsened_by_head_movement == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->worsened_by_head_movement == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $worsened_by_head_movement = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $worsened_by_head_movement_data = isset($worsened_by_head_movement[$request->worsened_by_head_movement]) ? $worsened_by_head_movement[$request->worsened_by_head_movement] : null;
+        $this->setScore($worsened_by_head_movement_data);
 
         /*question 10 - mechanical_stimuli*/
-        if($request->mechanical_stimuli == 1){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 1, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->mechanical_stimuli == 0){
-                $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $mechanical_stimuli = [
+            '0' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            '1' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 1, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];
+
+        $mechanical_stimuli_data = isset($mechanical_stimuli[$request->mechanical_stimuli]) ? $mechanical_stimuli[$request->mechanical_stimuli] : null;
+        $this->setScore($mechanical_stimuli_data);
 
         /*question 11*/
-        if($request->question_11 == 'the_head_ache_awokes_me_from_sleep'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->question_11 == 'early_morning_when_i_am_sleeping'){
-            $values = ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->question_11 == 'the_head_aches_is_coming_during_daytime'){
-                $values = ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 1, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $question_11 = [
+            'from_sleep'    => ['a' => 0, 'b' => 0, 'c' => 1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'when_sleeping' => ['a' => 0, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'during_daytime'=> ['a' => 0, 'b' => 0, 'c' =>-1, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 1, 'i' => 1, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+        ];  
+
+        $question_11_data = isset($question_11[$request->question_11]) ? $question_11[$request->question_11] : null;
+        $this->setScore($question_11_data);
 
         /*question 12*/
-        if($request->question_12 == 'not_that_often_low'){
-            $values = ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }elseif($request->question_12 == 'sometimes_moderate'){
-            $values = ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0];
-            $this->setScore($values);
-        }else{
-            if($request->question_12 == 'the_whole_time_high'){
-                $values = ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 1, 's' => 0, 't' => 0];
-                $this->setScore($values);
-            }
-        }
+        $question_12 = [
+            'low'       => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'moderate'  => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 1, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 0, 'r' => 0, 's' => 0, 't' => 0],
+            'high'      => ['a' => 1, 'b' => 0, 'c' => 0, 'd' => 0, 'e' => 0, 'f' => 0, 'g' => 0, 'h' => 0, 'i' => 0, 'j' => 0, 'k' => 0, 'l' => 0, 'm' => 0, 'n' => 0, 'o' => 0, 'p' => 0, 'q' => 1, 'r' => 1, 's' => 0, 't' => 0],
+        ];
+
+        $question_12_data = isset($question_12[$request->question_12]) ? $question_12[$request->question_12] : null;
+        $this->setScore($question_12_data);
 
         $score = 0;
         if(Session::has('score') && !empty(Session::get('score'))){
@@ -637,6 +533,10 @@ class SecondQuestionnairController extends Controller{
     }
 
     private function setScore($values){
+        if(!isset($values) || empty($values)){
+            return null;
+        }
+
         $keys = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't'];
 
         $data = [];
